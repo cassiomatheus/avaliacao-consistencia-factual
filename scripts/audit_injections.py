@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
-"""Entry point for audit."""
+"""Compatibility launcher; canonical: scripts/fase2_injecao/audit_injections.py."""
 from pathlib import Path
-import sys
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
-from factual_eval.cli import main
-
+import runpy
 if __name__ == '__main__':
-    raise SystemExit(main('audit'))
+    runpy.run_path(str(Path(__file__).resolve().parents[1] / 'fase2_injecao' / 'audit_injections.py'), run_name='__main__')

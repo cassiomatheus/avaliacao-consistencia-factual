@@ -1,0 +1,1268 @@
+{
+  "schema_version": "phase_migration_v1",
+  "new_project": "/home/cassiosilva/avaliacao-consistencia-factual",
+  "source_projects_preserved": [
+    "/home/cassiosilva/factual-consistency-evaluation",
+    "/home/cassiosilva/factual-injector-ui"
+  ],
+  "created_utc": "2026-11-11T19:37:34.967153+00:00",
+  "model_inference_executed": false,
+  "git_history_copied": true,
+  "scientific_status": "Sentence reviews and generated proposals stay provisional; no gold promoted by migration",
+  "files": [
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/README.md",
+      "destination": "historico/avaliador/README.md",
+      "source_sha256": "8d3f9e774c4eea0d816b25f6d9448eace744bac3a6eed729eec3b67d6a957777",
+      "destination_sha256": "8d3f9e774c4eea0d816b25f6d9448eace744bac3a6eed729eec3b67d6a957777",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/annotations/govreport5/revisao.historico/20261105T193554509392Z_4f3afe28.json",
+      "destination": "historico/avaliador/annotations/govreport5/revisao.historico/20261105T193554509392Z_4f3afe28.json",
+      "source_sha256": "e98ed3803ea32ab239c50f37dc61225ec9e580dc52d96fd9086e260a64c7f9f3",
+      "destination_sha256": "e98ed3803ea32ab239c50f37dc61225ec9e580dc52d96fd9086e260a64c7f9f3",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/annotations/govreport5/revisao.historico/20261105T211048237848Z_cf3d4ffd.json",
+      "destination": "historico/avaliador/annotations/govreport5/revisao.historico/20261105T211048237848Z_cf3d4ffd.json",
+      "source_sha256": "0b01a12c9cd8602da9697da083bbe72d5e58ddb4ce9499ab1331424c372bec63",
+      "destination_sha256": "0b01a12c9cd8602da9697da083bbe72d5e58ddb4ce9499ab1331424c372bec63",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/annotations/govreport5/revisao.historico/20261105T211102759220Z_93caa1f0.json",
+      "destination": "historico/avaliador/annotations/govreport5/revisao.historico/20261105T211102759220Z_93caa1f0.json",
+      "source_sha256": "d12122488faccb79148a73d3736b10fa0d0b1ef3ebafe31d19b335cc229a9059",
+      "destination_sha256": "d12122488faccb79148a73d3736b10fa0d0b1ef3ebafe31d19b335cc229a9059",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/annotations/govreport5/revisao.historico/20261105T211104352188Z_93c3fc16.json",
+      "destination": "historico/avaliador/annotations/govreport5/revisao.historico/20261105T211104352188Z_93c3fc16.json",
+      "source_sha256": "e2ad68dc3ba869b59f03e1b83e3e91dd7d687036d89a014b10a83e4d4d456d68",
+      "destination_sha256": "e2ad68dc3ba869b59f03e1b83e3e91dd7d687036d89a014b10a83e4d4d456d68",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/annotations/govreport5/revisao.historico/20261105T211334937714Z_75c5d4a4.json",
+      "destination": "historico/avaliador/annotations/govreport5/revisao.historico/20261105T211334937714Z_75c5d4a4.json",
+      "source_sha256": "c02911a26c18b6ffd2ce8ddffb3989f742ff0c03d9cc54cfdf6022bef71d392d",
+      "destination_sha256": "c02911a26c18b6ffd2ce8ddffb3989f742ff0c03d9cc54cfdf6022bef71d392d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/annotations/govreport5/revisao.historico/20261105T211339999608Z_a87f1d12.json",
+      "destination": "historico/avaliador/annotations/govreport5/revisao.historico/20261105T211339999608Z_a87f1d12.json",
+      "source_sha256": "f0684366d61334d4b3bc559217bf3f60907e71e736e5f15c079dd7c79f474cfe",
+      "destination_sha256": "f0684366d61334d4b3bc559217bf3f60907e71e736e5f15c079dd7c79f474cfe",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/annotations/govreport5/revisao.historico/20261105T211441907173Z_cdb70b9b.json",
+      "destination": "historico/avaliador/annotations/govreport5/revisao.historico/20261105T211441907173Z_cdb70b9b.json",
+      "source_sha256": "3601eadc6f33208a35c3fe574cb1f1b5585d77f270978ef741f4931ce3de6bc8",
+      "destination_sha256": "3601eadc6f33208a35c3fe574cb1f1b5585d77f270978ef741f4931ce3de6bc8",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/annotations/govreport5/revisao.historico/20261105T211443354727Z_32d2b19c.json",
+      "destination": "historico/avaliador/annotations/govreport5/revisao.historico/20261105T211443354727Z_32d2b19c.json",
+      "source_sha256": "07348e1918e1c435bc2f97608396c7a8be5701631dd153565f043c98ce1296e6",
+      "destination_sha256": "07348e1918e1c435bc2f97608396c7a8be5701631dd153565f043c98ce1296e6",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/annotations/govreport5/revisao.json",
+      "destination": "historico/avaliador/annotations/govreport5/revisao.json",
+      "source_sha256": "892bbf2a257171045e25d425186069fa7efb6d852acadad435f280f405e3664c",
+      "destination_sha256": "892bbf2a257171045e25d425186069fa7efb6d852acadad435f280f405e3664c",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/imports/selecao_v63_20261111.csv",
+      "destination": "historico/avaliador/imports/selecao_v63_20261111.csv",
+      "source_sha256": "b1cbb258f7d318305fd5284317613adb3443e52ef4ddb596798aaab143545213",
+      "destination_sha256": "b1cbb258f7d318305fd5284317613adb3443e52ef4ddb596798aaab143545213",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/imports/selecao_v63_20261111.manifest.json",
+      "destination": "historico/avaliador/imports/selecao_v63_20261111.manifest.json",
+      "source_sha256": "7f3b6be3384028610c817003d9d79e4b6485a826a7a74418a16d00f3eddc9af8",
+      "destination_sha256": "7f3b6be3384028610c817003d9d79e4b6485a826a7a74418a16d00f3eddc9af8",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/previews/auditoria-html-20261106.png",
+      "destination": "historico/avaliador/previews/auditoria-html-20261106.png",
+      "source_sha256": "d890f8af2c990812c111afbb99b7a3265465929f0eaac3c1ddc0c45fb39f62aa",
+      "destination_sha256": "d890f8af2c990812c111afbb99b7a3265465929f0eaac3c1ddc0c45fb39f62aa",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/previews/auditoria-progresso-20261106.png",
+      "destination": "historico/avaliador/previews/auditoria-progresso-20261106.png",
+      "source_sha256": "11d3456687d22f9460808bf73d42ee7504819e65c5fa1c6071195122036a90ee",
+      "destination_sha256": "11d3456687d22f9460808bf73d42ee7504819e65c5fa1c6071195122036a90ee",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/previews/auditoria-tema-claro.png",
+      "destination": "historico/avaliador/previews/auditoria-tema-claro.png",
+      "source_sha256": "2d769b943bb78107c0ea85c094201500fcbcd4525bf914a5b227b9155a8bcae1",
+      "destination_sha256": "2d769b943bb78107c0ea85c094201500fcbcd4525bf914a5b227b9155a8bcae1",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/previews/auditoria-tema-escuro.png",
+      "destination": "historico/avaliador/previews/auditoria-tema-escuro.png",
+      "source_sha256": "97e3236cdd7ec6823f725aced6ab5c70ae2a21e5337644acaf969db48fef0b6f",
+      "destination_sha256": "97e3236cdd7ec6823f725aced6ab5c70ae2a21e5337644acaf969db48fef0b6f",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/previews/auditoria-usabilidade-20261105.png",
+      "destination": "historico/avaliador/previews/auditoria-usabilidade-20261105.png",
+      "source_sha256": "61a7986355187b058fdf7a08a39d9a89703570d3ee11cc66bddcd9ca50ab81b0",
+      "destination_sha256": "61a7986355187b058fdf7a08a39d9a89703570d3ee11cc66bddcd9ca50ab81b0",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/claims/claims.parquet",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/claims/claims.parquet",
+      "source_sha256": "cb51c97e23c1f7de4201a1888327b337bd461cb0af6a466cadb71345491f2e56",
+      "destination_sha256": "cb51c97e23c1f7de4201a1888327b337bd461cb0af6a466cadb71345491f2e56",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/claims/generator_labels.jsonl",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/claims/generator_labels.jsonl",
+      "source_sha256": "81f916954da9c2b6a9d77c0f1785195aba81ffe11d98d8f38de07b2c3bec46ce",
+      "destination_sha256": "81f916954da9c2b6a9d77c0f1785195aba81ffe11d98d8f38de07b2c3bec46ce",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/claims/stage_counts.json",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/claims/stage_counts.json",
+      "source_sha256": "23a761a8ae17964f2205b0400319c8c9f7d77786bd457074d672e5cfd1015c11",
+      "destination_sha256": "23a761a8ae17964f2205b0400319c8c9f7d77786bd457074d672e5cfd1015c11",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/config.resolved.yaml",
+      "source_sha256": "f82e3f4e563a5ad8c37051032423d78374e46cf26580b3cfe80a5839dcb94fbb",
+      "destination_sha256": "f82e3f4e563a5ad8c37051032423d78374e46cf26580b3cfe80a5839dcb94fbb",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/execution.log",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/execution.log",
+      "source_sha256": "e4b7cec6089b8d51f75803c742bc2ec1592971080e7113a209a3df0c2ffa36b8",
+      "destination_sha256": "e4b7cec6089b8d51f75803c742bc2ec1592971080e7113a209a3df0c2ffa36b8",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/generate/dataset_info.json",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/generate/dataset_info.json",
+      "source_sha256": "98de7141917a9463088bd8977456a2784239cffdc199c46206705d82916862a2",
+      "destination_sha256": "98de7141917a9463088bd8977456a2784239cffdc199c46206705d82916862a2",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/generate/injected.csv",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/generate/injected.csv",
+      "source_sha256": "7102ba148cf5b8590b910f892fcc6bcf2a88ae4f4012fcaf2213684a8c4ca6cf",
+      "destination_sha256": "7102ba148cf5b8590b910f892fcc6bcf2a88ae4f4012fcaf2213684a8c4ca6cf",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/generate/injection_manifest.jsonl",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/generate/injection_manifest.jsonl",
+      "source_sha256": "dd572aa9e3eee59060c53121ea24f9a987ab08a9b4196a95df7e4e407b410b0f",
+      "destination_sha256": "dd572aa9e3eee59060c53121ea24f9a987ab08a9b4196a95df7e4e407b410b0f",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/generate/original.parquet",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/generate/original.parquet",
+      "source_sha256": "64886822114146aef40043c4ed2231aa1b715d29cb9841e15807526a30e9f3ac",
+      "destination_sha256": "64886822114146aef40043c4ed2231aa1b715d29cb9841e15807526a30e9f3ac",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/generate/technical_audit.json",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/generate/technical_audit.json",
+      "source_sha256": "8c60b39101421ad1fc23a06349e11ef0f17468a6bd710c21217fc9349bcd575d",
+      "destination_sha256": "8c60b39101421ad1fc23a06349e11ef0f17468a6bd710c21217fc9349bcd575d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/manifest.json",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/manifest.json",
+      "source_sha256": "28ba318448aa6c96ef9e69de416e9e2d681c5ca231642382c727decea50d8f6c",
+      "destination_sha256": "28ba318448aa6c96ef9e69de416e9e2d681c5ca231642382c727decea50d8f6c",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/nli/nli.parquet",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/nli/nli.parquet",
+      "source_sha256": "1a69e015b56a8eea2fabe15c1b4601834cfc45a2d5c12cfb69daab036259e87c",
+      "destination_sha256": "1a69e015b56a8eea2fabe15c1b4601834cfc45a2d5c12cfb69daab036259e87c",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/nli/stage_counts.json",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/nli/stage_counts.json",
+      "source_sha256": "2f59b68dbd811fecc43e319a76648699923a9c87b4cbdeba690da2ae8bdd3f08",
+      "destination_sha256": "2f59b68dbd811fecc43e319a76648699923a9c87b4cbdeba690da2ae8bdd3f08",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/retrieval/retrieval.parquet",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/retrieval/retrieval.parquet",
+      "source_sha256": "9045c9bc4464dd3c4c3470de7a220542bad5acbcd0e3c492159fc4e32a19e58c",
+      "destination_sha256": "9045c9bc4464dd3c4c3470de7a220542bad5acbcd0e3c492159fc4e32a19e58c",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/retrieval/stage_counts.json",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/retrieval/stage_counts.json",
+      "source_sha256": "925636607018d80cb7b2c923f53249f1cc5bd2449921386e3f1413f149bdf871",
+      "destination_sha256": "925636607018d80cb7b2c923f53249f1cc5bd2449921386e3f1413f149bdf871",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/taxonomy/stage_counts.json",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/taxonomy/stage_counts.json",
+      "source_sha256": "b5bd498858194e6dc4a2ee26e8fdcd6bf9ebccfa164d9f14c3436cb40ebd1982",
+      "destination_sha256": "b5bd498858194e6dc4a2ee26e8fdcd6bf9ebccfa164d9f14c3436cb40ebd1982",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/taxonomy/taxonomy.confusion.csv",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/taxonomy/taxonomy.confusion.csv",
+      "source_sha256": "43114bb6ba724ed16334f0a610a4050df310dbed982a57aae68c4b81b6e49c34",
+      "destination_sha256": "43114bb6ba724ed16334f0a610a4050df310dbed982a57aae68c4b81b6e49c34",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/20261022T184356Z_2f56a38a/taxonomy/taxonomy.parquet",
+      "destination": "historico/avaliador/runs/20261022T184356Z_2f56a38a/taxonomy/taxonomy.parquet",
+      "source_sha256": "a631bfb711a4825566476c0fcdecf99baf59f499a8be95132c15672df8cd168b",
+      "destination_sha256": "a631bfb711a4825566476c0fcdecf99baf59f499a8be95132c15672df8cd168b",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-html-20261106/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/auditoria-html-20261106/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-html-20261106/execution.log",
+      "destination": "historico/avaliador/runs/auditoria-html-20261106/execution.log",
+      "source_sha256": "60cd85555eb7042bb29e5504d722b04a7af35503bc4bdee35b3c1bd9d2203b55",
+      "destination_sha256": "60cd85555eb7042bb29e5504d722b04a7af35503bc4bdee35b3c1bd9d2203b55",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-html-20261106/manifest.json",
+      "destination": "historico/avaliador/runs/auditoria-html-20261106/manifest.json",
+      "source_sha256": "495b4bf0dd21de24099e8b09be3db06d3c7d470e0370aff221e8848131aebd10",
+      "destination_sha256": "495b4bf0dd21de24099e8b09be3db06d3c7d470e0370aff221e8848131aebd10",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-html-20261106/review-html/avaliacao.html",
+      "destination": "historico/avaliador/runs/auditoria-html-20261106/review-html/avaliacao.html",
+      "source_sha256": "bf59115edcb068eafc589733fa8ae74532acba8146a76f33c9a2e4d64e2a587e",
+      "destination_sha256": "bf59115edcb068eafc589733fa8ae74532acba8146a76f33c9a2e4d64e2a587e",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-progresso-20261106/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/auditoria-progresso-20261106/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-progresso-20261106/execution.log",
+      "destination": "historico/avaliador/runs/auditoria-progresso-20261106/execution.log",
+      "source_sha256": "1f9bddc91ab19256f03f466515f6481e312addc1909d64617ba2d7bb8ef042e7",
+      "destination_sha256": "1f9bddc91ab19256f03f466515f6481e312addc1909d64617ba2d7bb8ef042e7",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-progresso-20261106/manifest.json",
+      "destination": "historico/avaliador/runs/auditoria-progresso-20261106/manifest.json",
+      "source_sha256": "2f54c03f2e21e824a6f0e8c9c019cd65ca87adfb2b40b578072c45cb3888ae83",
+      "destination_sha256": "2f54c03f2e21e824a6f0e8c9c019cd65ca87adfb2b40b578072c45cb3888ae83",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-progresso-20261106/review-html/avaliacao.html",
+      "destination": "historico/avaliador/runs/auditoria-progresso-20261106/review-html/avaliacao.html",
+      "source_sha256": "bf59115edcb068eafc589733fa8ae74532acba8146a76f33c9a2e4d64e2a587e",
+      "destination_sha256": "bf59115edcb068eafc589733fa8ae74532acba8146a76f33c9a2e4d64e2a587e",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-temas-20261105/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/auditoria-temas-20261105/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-temas-20261105/execution.log",
+      "destination": "historico/avaliador/runs/auditoria-temas-20261105/execution.log",
+      "source_sha256": "783a5caf4e4eaa774c4efec5bb5fbce874907476def1d26c504bdbaf48248c48",
+      "destination_sha256": "783a5caf4e4eaa774c4efec5bb5fbce874907476def1d26c504bdbaf48248c48",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-temas-20261105/manifest.json",
+      "destination": "historico/avaliador/runs/auditoria-temas-20261105/manifest.json",
+      "source_sha256": "3cc020447258f0cae5eb369211e9167bf2cfc02d9fc2607c558e4c3926e237b9",
+      "destination_sha256": "3cc020447258f0cae5eb369211e9167bf2cfc02d9fc2607c558e4c3926e237b9",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-temas-20261105/review-html/avaliacao.html",
+      "destination": "historico/avaliador/runs/auditoria-temas-20261105/review-html/avaliacao.html",
+      "source_sha256": "f0d929268b3833affeacb4cfa6a5de30bd5239d33e843530b0ff18d8751714e0",
+      "destination_sha256": "f0d929268b3833affeacb4cfa6a5de30bd5239d33e843530b0ff18d8751714e0",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-usabilidade-20261105/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/auditoria-usabilidade-20261105/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-usabilidade-20261105/execution.log",
+      "destination": "historico/avaliador/runs/auditoria-usabilidade-20261105/execution.log",
+      "source_sha256": "ec176b6ce8b8ac0a66acb0d670f142ec4232398d58ac911fd37158b4b957b599",
+      "destination_sha256": "ec176b6ce8b8ac0a66acb0d670f142ec4232398d58ac911fd37158b4b957b599",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-usabilidade-20261105/manifest.json",
+      "destination": "historico/avaliador/runs/auditoria-usabilidade-20261105/manifest.json",
+      "source_sha256": "0ce3aff5374425286993e0b758677028c8a4821c45e889abb05f7db3cb1e3ad9",
+      "destination_sha256": "0ce3aff5374425286993e0b758677028c8a4821c45e889abb05f7db3cb1e3ad9",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/auditoria-usabilidade-20261105/review-html/avaliacao.html",
+      "destination": "historico/avaliador/runs/auditoria-usabilidade-20261105/review-html/avaliacao.html",
+      "source_sha256": "42600bf67e5b747eddfc0cab81bafe4afedd9d2da842661a5cb86b2abcc7efc2",
+      "destination_sha256": "42600bf67e5b747eddfc0cab81bafe4afedd9d2da842661a5cb86b2abcc7efc2",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/execution.log",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/execution.log",
+      "source_sha256": "f3031d54fb9e0ca53f38715e62837e6a3891f5bac752273db53f50c852dcc3ec",
+      "destination_sha256": "f3031d54fb9e0ca53f38715e62837e6a3891f5bac752273db53f50c852dcc3ec",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/manifest.json",
+      "source_sha256": "81e92414bea2917045e2edfd217e9eb6990281c6b7782faae5ce7c4f1523c434",
+      "destination_sha256": "81e92414bea2917045e2edfd217e9eb6990281c6b7782faae5ce7c4f1523c434",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/sample-reference/amostragem.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/sample-reference/amostragem.jsonl",
+      "source_sha256": "78005cbba18a5605c7fa4dd87649f998f36ad434a55c44f1ea978da83a18b984",
+      "destination_sha256": "78005cbba18a5605c7fa4dd87649f998f36ad434a55c44f1ea978da83a18b984",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/sample-reference/candidatos.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/sample-reference/candidatos.jsonl",
+      "source_sha256": "23ed195a4ad8209ea53bf48a8dfa6f59747176325e6e86465f0635aef9987c1e",
+      "destination_sha256": "23ed195a4ad8209ea53bf48a8dfa6f59747176325e6e86465f0635aef9987c1e",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/sample-reference/claims.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/sample-reference/claims.jsonl",
+      "source_sha256": "c0501d035b89470c3a40c623875c61eb695714954534253a6be89b196ba4d895",
+      "destination_sha256": "c0501d035b89470c3a40c623875c61eb695714954534253a6be89b196ba4d895",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/sample-reference/documentos.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/sample-reference/documentos.jsonl",
+      "source_sha256": "836e55f4d461af59fd095762e62915af5a35b357ef2af03a4540d6b2271ec3b4",
+      "destination_sha256": "836e55f4d461af59fd095762e62915af5a35b357ef2af03a4540d6b2271ec3b4",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/sample-reference/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/sample-reference/manifest.json",
+      "source_sha256": "5a2670e3842e5fde7c7cb4f63bae7d09e93508256d46f85195b627d083ce8377",
+      "destination_sha256": "5a2670e3842e5fde7c7cb4f63bae7d09e93508256d46f85195b627d083ce8377",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/sample-reference/plano_amostragem.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/sample-reference/plano_amostragem.json",
+      "source_sha256": "bee5dc116b51567d7b56a7afe1047751da9eab4e2e43ff2ea768e95e3920d211",
+      "destination_sha256": "bee5dc116b51567d7b56a7afe1047751da9eab4e2e43ff2ea768e95e3920d211",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/sample-reference/ranking_prioridade.csv",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/sample-reference/ranking_prioridade.csv",
+      "source_sha256": "b6800bd6a44e1c63f1e4d04c85613b168674bb34021a818874d6c56a6f361f90",
+      "destination_sha256": "b6800bd6a44e1c63f1e4d04c85613b168674bb34021a818874d6c56a6f361f90",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-amostra/sample-reference/sentencas.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-amostra/sample-reference/sentencas.jsonl",
+      "source_sha256": "c10ca1c31a030b7701a74fb2b8ddaa6413002ca2a6bf263cc793bd59df2d5ae5",
+      "destination_sha256": "c10ca1c31a030b7701a74fb2b8ddaa6413002ca2a6bf263cc793bd59df2d5ae5",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/gold-govreport5-html/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html/execution.log",
+      "destination": "historico/avaliador/runs/gold-govreport5-html/execution.log",
+      "source_sha256": "e8de7832997db91a4e44348d103cfe18d7c50457bdf1ba0f39a9941734e1dfba",
+      "destination_sha256": "e8de7832997db91a4e44348d103cfe18d7c50457bdf1ba0f39a9941734e1dfba",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-html/manifest.json",
+      "source_sha256": "dc5cccda1a794d16de275dfa290293544278bbe992a653ec9567f02188d6a668",
+      "destination_sha256": "dc5cccda1a794d16de275dfa290293544278bbe992a653ec9567f02188d6a668",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html/review-html/avaliacao.html",
+      "destination": "historico/avaliador/runs/gold-govreport5-html/review-html/avaliacao.html",
+      "source_sha256": "77edf3c0c1d2507d27bc14a39ec707d222496822fbfa7579eebbaae3eee28374",
+      "destination_sha256": "77edf3c0c1d2507d27bc14a39ec707d222496822fbfa7579eebbaae3eee28374",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue/execution.log",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue/execution.log",
+      "source_sha256": "e0cc2074e5329d1e4f5dca3f3f60f18645571d5b1c7649c23d7e5958f0aa20aa",
+      "destination_sha256": "e0cc2074e5329d1e4f5dca3f3f60f18645571d5b1c7649c23d7e5958f0aa20aa",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue/manifest.json",
+      "source_sha256": "f02b1603602b7c255b93bccbbd0fcf4ff7608804849e1a3f57458f1154046917",
+      "destination_sha256": "f02b1603602b7c255b93bccbbd0fcf4ff7608804849e1a3f57458f1154046917",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue/review-html/avaliacao.html",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue/review-html/avaliacao.html",
+      "source_sha256": "113a34d06d3c0228c6a7d640fab2b422c8d42b7b11ee669109e0487e3b68d055",
+      "destination_sha256": "113a34d06d3c0228c6a7d640fab2b422c8d42b7b11ee669109e0487e3b68d055",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue-completo/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue-completo/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue-completo/execution.log",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue-completo/execution.log",
+      "source_sha256": "c0c884c2b097bac00dd6ab16dbb61ce79ad0ffbbb1b6ddbf46a5348921c6381e",
+      "destination_sha256": "c0c884c2b097bac00dd6ab16dbb61ce79ad0ffbbb1b6ddbf46a5348921c6381e",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue-completo/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue-completo/manifest.json",
+      "source_sha256": "67d9b4a105c0b5a49d9a8a85eaea1b50b44a905246b6ff6ae1b8e0fc36eb768e",
+      "destination_sha256": "67d9b4a105c0b5a49d9a8a85eaea1b50b44a905246b6ff6ae1b8e0fc36eb768e",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue-piloto/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue-piloto/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue-piloto/execution.log",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue-piloto/execution.log",
+      "source_sha256": "74e088d819a2c23c086fcfb7aae36681b21e86a97018840d3e78d09fe0e479d0",
+      "destination_sha256": "74e088d819a2c23c086fcfb7aae36681b21e86a97018840d3e78d09fe0e479d0",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue-piloto/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue-piloto/manifest.json",
+      "source_sha256": "b963a973b309ffbbd80c1475e5753ce3876f64ff35fcb1d8a12102ae2411865c",
+      "destination_sha256": "b963a973b309ffbbd80c1475e5753ce3876f64ff35fcb1d8a12102ae2411865c",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-html-bilingue-piloto/review-html/avaliacao.html",
+      "destination": "historico/avaliador/runs/gold-govreport5-html-bilingue-piloto/review-html/avaliacao.html",
+      "source_sha256": "767b4f7dbc42e05e4700ef8c54adbe50c84ca5e3c5a24c4b194ac32e60493e7b",
+      "destination_sha256": "767b4f7dbc42e05e4700ef8c54adbe50c84ca5e3c5a24c4b194ac32e60493e7b",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo/config.resolved.yaml",
+      "source_sha256": "de5d0e5adab3e68008f509fedba1a5b03f9bb64fe3dd7730ff201894d1b9cf46",
+      "destination_sha256": "de5d0e5adab3e68008f509fedba1a5b03f9bb64fe3dd7730ff201894d1b9cf46",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo/execution.log",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo/execution.log",
+      "source_sha256": "b555a386f84ea77fb5fa657fa1a5d08a45190c50ecf243b1a243a98242a12915",
+      "destination_sha256": "b555a386f84ea77fb5fa657fa1a5d08a45190c50ecf243b1a243a98242a12915",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo/manifest.json",
+      "source_sha256": "09aac03b809648faf0459bbe11ebd0d32e918c1022dc1725e015ef41fc92b7dc",
+      "destination_sha256": "09aac03b809648faf0459bbe11ebd0d32e918c1022dc1725e015ef41fc92b7dc",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo-v2/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo-v2/config.resolved.yaml",
+      "source_sha256": "de5d0e5adab3e68008f509fedba1a5b03f9bb64fe3dd7730ff201894d1b9cf46",
+      "destination_sha256": "de5d0e5adab3e68008f509fedba1a5b03f9bb64fe3dd7730ff201894d1b9cf46",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo-v2/execution.log",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo-v2/execution.log",
+      "source_sha256": "9dce0ce7b1ca9a7ebc086f517204d7dfde6253ce15c7be7e3e05c1d70d789cba",
+      "destination_sha256": "9dce0ce7b1ca9a7ebc086f517204d7dfde6253ce15c7be7e3e05c1d70d789cba",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo-v2/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo-v2/manifest.json",
+      "source_sha256": "70d9157a9fa7191112987ca0688660b857d8940ffeaa823adc1e8f6d2f7f4010",
+      "destination_sha256": "70d9157a9fa7191112987ca0688660b857d8940ffeaa823adc1e8f6d2f7f4010",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo-v2/prepare-reference/candidatos.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo-v2/prepare-reference/candidatos.jsonl",
+      "source_sha256": "23ed195a4ad8209ea53bf48a8dfa6f59747176325e6e86465f0635aef9987c1e",
+      "destination_sha256": "23ed195a4ad8209ea53bf48a8dfa6f59747176325e6e86465f0635aef9987c1e",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo-v2/prepare-reference/claims.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo-v2/prepare-reference/claims.jsonl",
+      "source_sha256": "c0501d035b89470c3a40c623875c61eb695714954534253a6be89b196ba4d895",
+      "destination_sha256": "c0501d035b89470c3a40c623875c61eb695714954534253a6be89b196ba4d895",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo-v2/prepare-reference/documentos.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo-v2/prepare-reference/documentos.jsonl",
+      "source_sha256": "836e55f4d461af59fd095762e62915af5a35b357ef2af03a4540d6b2271ec3b4",
+      "destination_sha256": "836e55f4d461af59fd095762e62915af5a35b357ef2af03a4540d6b2271ec3b4",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo-v2/prepare-reference/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo-v2/prepare-reference/manifest.json",
+      "source_sha256": "5a2670e3842e5fde7c7cb4f63bae7d09e93508256d46f85195b627d083ce8377",
+      "destination_sha256": "5a2670e3842e5fde7c7cb4f63bae7d09e93508256d46f85195b627d083ce8377",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-preparo-v2/prepare-reference/sentencas.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-preparo-v2/prepare-reference/sentencas.jsonl",
+      "source_sha256": "c10ca1c31a030b7701a74fb2b8ddaa6413002ca2a6bf263cc793bd59df2d5ae5",
+      "destination_sha256": "c10ca1c31a030b7701a74fb2b8ddaa6413002ca2a6bf263cc793bd59df2d5ae5",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-traducao-completa/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/gold-govreport5-traducao-completa/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-traducao-completa/execution.log",
+      "destination": "historico/avaliador/runs/gold-govreport5-traducao-completa/execution.log",
+      "source_sha256": "830f262133b3fa1817a978711031b756fb91aaedb2b686efa68e019ffdeb1357",
+      "destination_sha256": "830f262133b3fa1817a978711031b756fb91aaedb2b686efa68e019ffdeb1357",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-traducao-completa/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-traducao-completa/manifest.json",
+      "source_sha256": "dc7164fa893b78212c95ce93b23dbc6c1b4440ee50187d49599d93fe13f51858",
+      "destination_sha256": "dc7164fa893b78212c95ce93b23dbc6c1b4440ee50187d49599d93fe13f51858",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-traducao-completa/translate-reference/translations.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-traducao-completa/translate-reference/translations.jsonl",
+      "source_sha256": "b7f5392b78a9dc96df453b3c2e5ab779070c3f74605971ec16f892a3b27712d1",
+      "destination_sha256": "b7f5392b78a9dc96df453b3c2e5ab779070c3f74605971ec16f892a3b27712d1",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-traducao-piloto/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/gold-govreport5-traducao-piloto/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-traducao-piloto/execution.log",
+      "destination": "historico/avaliador/runs/gold-govreport5-traducao-piloto/execution.log",
+      "source_sha256": "f0fa6e9c9aa00acfdb5f059edfc5f90d9c669358c30dabdba49e03059def2cdf",
+      "destination_sha256": "f0fa6e9c9aa00acfdb5f059edfc5f90d9c669358c30dabdba49e03059def2cdf",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-traducao-piloto/manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-traducao-piloto/manifest.json",
+      "source_sha256": "502ed00cba3ba28e3e39858050b4327a5a754a3cedd1468ac2de3e2d9222ec98",
+      "destination_sha256": "502ed00cba3ba28e3e39858050b4327a5a754a3cedd1468ac2de3e2d9222ec98",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-traducao-piloto/translate-reference/translation_manifest.json",
+      "destination": "historico/avaliador/runs/gold-govreport5-traducao-piloto/translate-reference/translation_manifest.json",
+      "source_sha256": "2d689bda0ec8258639d73668c8a3659982236717e5ebde83c8c36e6fd0f4cbf4",
+      "destination_sha256": "2d689bda0ec8258639d73668c8a3659982236717e5ebde83c8c36e6fd0f4cbf4",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/gold-govreport5-traducao-piloto/translate-reference/translations.jsonl",
+      "destination": "historico/avaliador/runs/gold-govreport5-traducao-piloto/translate-reference/translations.jsonl",
+      "source_sha256": "38d4ad75fbdc30954af311ecc8473a8fb7277eeb2166e8363796afecdfac33e7",
+      "destination_sha256": "38d4ad75fbdc30954af311ecc8473a8fb7277eeb2166e8363796afecdfac33e7",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/govreport5-traducao-20261023-103741/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/govreport5-traducao-20261023-103741/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/govreport5-traducao-20261023-103741/execution.log",
+      "destination": "historico/avaliador/runs/govreport5-traducao-20261023-103741/execution.log",
+      "source_sha256": "e819c3f37db47a25e63601d5d0ae78378d4ddba6117b408603703610d7c1c3a4",
+      "destination_sha256": "e819c3f37db47a25e63601d5d0ae78378d4ddba6117b408603703610d7c1c3a4",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/govreport5-traducao-20261023-103741/manifest.json",
+      "destination": "historico/avaliador/runs/govreport5-traducao-20261023-103741/manifest.json",
+      "source_sha256": "497cf2289468742b616b74b794f81c1a5fd674767b4146afd70afe85964e2a79",
+      "destination_sha256": "497cf2289468742b616b74b794f81c1a5fd674767b4146afd70afe85964e2a79",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/govreport5-traducao-20261023-103741/translate-reference/translation_manifest.json",
+      "destination": "historico/avaliador/runs/govreport5-traducao-20261023-103741/translate-reference/translation_manifest.json",
+      "source_sha256": "d6b54931c3ba2b7103b962fdd6ae60c38b862c2bbb28cbf90278b97e0bbf52ca",
+      "destination_sha256": "d6b54931c3ba2b7103b962fdd6ae60c38b862c2bbb28cbf90278b97e0bbf52ca",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/govreport5-traducao-20261023-103741/translate-reference/translations.jsonl",
+      "destination": "historico/avaliador/runs/govreport5-traducao-20261023-103741/translate-reference/translations.jsonl",
+      "source_sha256": "7223334325270fe4e64edadbaeff5754354ea8c54b62dec876e0317c85c8acdb",
+      "destination_sha256": "7223334325270fe4e64edadbaeff5754354ea8c54b62dec876e0317c85c8acdb",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/govreport5-traducao-20261023-103741-html/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/govreport5-traducao-20261023-103741-html/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/govreport5-traducao-20261023-103741-html/execution.log",
+      "destination": "historico/avaliador/runs/govreport5-traducao-20261023-103741-html/execution.log",
+      "source_sha256": "1542cabae4c4ab141407cfa177dcb423a7e1b2261be519b2c7e8a8145f05e963",
+      "destination_sha256": "1542cabae4c4ab141407cfa177dcb423a7e1b2261be519b2c7e8a8145f05e963",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/govreport5-traducao-20261023-103741-html/manifest.json",
+      "destination": "historico/avaliador/runs/govreport5-traducao-20261023-103741-html/manifest.json",
+      "source_sha256": "35aadb0d2d383e271e3d7edcf5e471e61a1c5b9c4d78a6d84ee1e826132951ea",
+      "destination_sha256": "35aadb0d2d383e271e3d7edcf5e471e61a1c5b9c4d78a6d84ee1e826132951ea",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/govreport5-traducao-20261023-103741-html/review-html/avaliacao.html",
+      "destination": "historico/avaliador/runs/govreport5-traducao-20261023-103741-html/review-html/avaliacao.html",
+      "source_sha256": "77c1975f1703ddf54cc511431145eea0e653191d904d5608661ea2ba597921a7",
+      "destination_sha256": "77c1975f1703ddf54cc511431145eea0e653191d904d5608661ea2ba597921a7",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-html/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/verification-html/config.resolved.yaml",
+      "source_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "destination_sha256": "d826631640f6c54aa404015e87622b2838f118e6c341acb4ec7d66b23ba6652d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-html/execution.log",
+      "destination": "historico/avaliador/runs/verification-html/execution.log",
+      "source_sha256": "aa5d3bbeb37ac8fc912137b01ce0716413c1245dc486ec991c31b6f26b3ae1c9",
+      "destination_sha256": "aa5d3bbeb37ac8fc912137b01ce0716413c1245dc486ec991c31b6f26b3ae1c9",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-html/manifest.json",
+      "destination": "historico/avaliador/runs/verification-html/manifest.json",
+      "source_sha256": "8b98c18db94ef3da853bf817a8fe1f135ca1ec04faa4e1dbbce11bee8fcd782b",
+      "destination_sha256": "8b98c18db94ef3da853bf817a8fe1f135ca1ec04faa4e1dbbce11bee8fcd782b",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-html/review-html/avaliacao.html",
+      "destination": "historico/avaliador/runs/verification-html/review-html/avaliacao.html",
+      "source_sha256": "45ab8c4d321668139fa189db70ab77d3200e1741866f865faaacb1addd2afb8b",
+      "destination_sha256": "45ab8c4d321668139fa189db70ab77d3200e1741866f865faaacb1addd2afb8b",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-injections/audit/technical_audit.json",
+      "destination": "historico/avaliador/runs/verification-injections/audit/technical_audit.json",
+      "source_sha256": "f535b8b8ae747b3ba7b7488e617fda9703c05d1f11bf1c1898183767b65a73b3",
+      "destination_sha256": "f535b8b8ae747b3ba7b7488e617fda9703c05d1f11bf1c1898183767b65a73b3",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-injections/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/verification-injections/config.resolved.yaml",
+      "source_sha256": "07275e0c92dae4cbee5838036fed43cbe1da7c3bf30141eee69bb277ab5aff1e",
+      "destination_sha256": "07275e0c92dae4cbee5838036fed43cbe1da7c3bf30141eee69bb277ab5aff1e",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-injections/execution.log",
+      "destination": "historico/avaliador/runs/verification-injections/execution.log",
+      "source_sha256": "6ddf202330a2d51b8168c37cb79a53ef7bdcb9a64eee762dc4cc0d0153a15d7b",
+      "destination_sha256": "6ddf202330a2d51b8168c37cb79a53ef7bdcb9a64eee762dc4cc0d0153a15d7b",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-injections/manifest.json",
+      "destination": "historico/avaliador/runs/verification-injections/manifest.json",
+      "source_sha256": "02f5ede7ab9a715252f98a48ee2c77b1123631a9a18f489a89424016b380ff21",
+      "destination_sha256": "02f5ede7ab9a715252f98a48ee2c77b1123631a9a18f489a89424016b380ff21",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-reference/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/verification-reference/config.resolved.yaml",
+      "source_sha256": "78ec91422fc537e74b2efe8128ea8a771f3002689d419a78c42a760db8d109ab",
+      "destination_sha256": "78ec91422fc537e74b2efe8128ea8a771f3002689d419a78c42a760db8d109ab",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-reference/execution.log",
+      "destination": "historico/avaliador/runs/verification-reference/execution.log",
+      "source_sha256": "3a02e42fcfdcbe61ab2dd41c433d54f04f7c25e20fdbbfdf436e35c1596239f7",
+      "destination_sha256": "3a02e42fcfdcbe61ab2dd41c433d54f04f7c25e20fdbbfdf436e35c1596239f7",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-reference/manifest.json",
+      "destination": "historico/avaliador/runs/verification-reference/manifest.json",
+      "source_sha256": "187f04930e71fd63a9c1c37435b8ff136ce4f51034d68fa09f45bf33d2ee7b11",
+      "destination_sha256": "187f04930e71fd63a9c1c37435b8ff136ce4f51034d68fa09f45bf33d2ee7b11",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-reference/prepare-reference/candidatos.jsonl",
+      "destination": "historico/avaliador/runs/verification-reference/prepare-reference/candidatos.jsonl",
+      "source_sha256": "f9e1ddf27bf10ccdfe3428ed876fa8b19e0f1c02cab2747e5827d4d361828189",
+      "destination_sha256": "f9e1ddf27bf10ccdfe3428ed876fa8b19e0f1c02cab2747e5827d4d361828189",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-reference/prepare-reference/claims.jsonl",
+      "destination": "historico/avaliador/runs/verification-reference/prepare-reference/claims.jsonl",
+      "source_sha256": "34d2d053e39e4141789e6e8977e3a7cb4ef3647f14957d445dcd1aa45184afab",
+      "destination_sha256": "34d2d053e39e4141789e6e8977e3a7cb4ef3647f14957d445dcd1aa45184afab",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-reference/prepare-reference/documentos.jsonl",
+      "destination": "historico/avaliador/runs/verification-reference/prepare-reference/documentos.jsonl",
+      "source_sha256": "04d6e0b7afd2a033656d4f976cdec356bf86eda9272456a7b1a9281664db9307",
+      "destination_sha256": "04d6e0b7afd2a033656d4f976cdec356bf86eda9272456a7b1a9281664db9307",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-reference/prepare-reference/manifest.json",
+      "destination": "historico/avaliador/runs/verification-reference/prepare-reference/manifest.json",
+      "source_sha256": "c19166533027ac584f42ab09a676793687d94ddab8264da43b4c370e5dec2d83",
+      "destination_sha256": "c19166533027ac584f42ab09a676793687d94ddab8264da43b4c370e5dec2d83",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-reference/prepare-reference/sentencas.jsonl",
+      "destination": "historico/avaliador/runs/verification-reference/prepare-reference/sentencas.jsonl",
+      "source_sha256": "23db423bf9694906efa8d7a3ed1038f0345898d05ca8949d73386f7195bd2d3f",
+      "destination_sha256": "23db423bf9694906efa8d7a3ed1038f0345898d05ca8949d73386f7195bd2d3f",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/config.resolved.yaml",
+      "destination": "historico/avaliador/runs/verification-sampling/config.resolved.yaml",
+      "source_sha256": "bfeee46749339fa7f87f1635482b5ed4129c53d6c7df6ebf156b741c69411de0",
+      "destination_sha256": "bfeee46749339fa7f87f1635482b5ed4129c53d6c7df6ebf156b741c69411de0",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/execution.log",
+      "destination": "historico/avaliador/runs/verification-sampling/execution.log",
+      "source_sha256": "7edd75efbdbee0fd09a19ba8f5ed0df3980212dbd12ba465351d9791d96a3a26",
+      "destination_sha256": "7edd75efbdbee0fd09a19ba8f5ed0df3980212dbd12ba465351d9791d96a3a26",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/manifest.json",
+      "destination": "historico/avaliador/runs/verification-sampling/manifest.json",
+      "source_sha256": "90fa611dccd5e5d75eba6c58c11da1a98f80481a157eaa1d1bba4db1f35bd9af",
+      "destination_sha256": "90fa611dccd5e5d75eba6c58c11da1a98f80481a157eaa1d1bba4db1f35bd9af",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/sample-reference/amostragem.jsonl",
+      "destination": "historico/avaliador/runs/verification-sampling/sample-reference/amostragem.jsonl",
+      "source_sha256": "2f0573697ef2b7217bbe4c034cd45d13fff7a8efb5b421f5b61dda4ceb18f5da",
+      "destination_sha256": "2f0573697ef2b7217bbe4c034cd45d13fff7a8efb5b421f5b61dda4ceb18f5da",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/sample-reference/candidatos.jsonl",
+      "destination": "historico/avaliador/runs/verification-sampling/sample-reference/candidatos.jsonl",
+      "source_sha256": "f9e1ddf27bf10ccdfe3428ed876fa8b19e0f1c02cab2747e5827d4d361828189",
+      "destination_sha256": "f9e1ddf27bf10ccdfe3428ed876fa8b19e0f1c02cab2747e5827d4d361828189",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/sample-reference/claims.jsonl",
+      "destination": "historico/avaliador/runs/verification-sampling/sample-reference/claims.jsonl",
+      "source_sha256": "34d2d053e39e4141789e6e8977e3a7cb4ef3647f14957d445dcd1aa45184afab",
+      "destination_sha256": "34d2d053e39e4141789e6e8977e3a7cb4ef3647f14957d445dcd1aa45184afab",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/sample-reference/documentos.jsonl",
+      "destination": "historico/avaliador/runs/verification-sampling/sample-reference/documentos.jsonl",
+      "source_sha256": "04d6e0b7afd2a033656d4f976cdec356bf86eda9272456a7b1a9281664db9307",
+      "destination_sha256": "04d6e0b7afd2a033656d4f976cdec356bf86eda9272456a7b1a9281664db9307",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/sample-reference/manifest.json",
+      "destination": "historico/avaliador/runs/verification-sampling/sample-reference/manifest.json",
+      "source_sha256": "c19166533027ac584f42ab09a676793687d94ddab8264da43b4c370e5dec2d83",
+      "destination_sha256": "c19166533027ac584f42ab09a676793687d94ddab8264da43b4c370e5dec2d83",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/sample-reference/plano_amostragem.json",
+      "destination": "historico/avaliador/runs/verification-sampling/sample-reference/plano_amostragem.json",
+      "source_sha256": "3935609aefbd535536b8cb54227ac59fc72599ce6d0f5badfffb589b37d48ca4",
+      "destination_sha256": "3935609aefbd535536b8cb54227ac59fc72599ce6d0f5badfffb589b37d48ca4",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/sample-reference/ranking_prioridade.csv",
+      "destination": "historico/avaliador/runs/verification-sampling/sample-reference/ranking_prioridade.csv",
+      "source_sha256": "56bf3c27a5e1c113ed7dc5e888e3538978046abd209c4e665b838659d42e6b99",
+      "destination_sha256": "56bf3c27a5e1c113ed7dc5e888e3538978046abd209c4e665b838659d42e6b99",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/runs/verification-sampling/sample-reference/sentencas.jsonl",
+      "destination": "historico/avaliador/runs/verification-sampling/sample-reference/sentencas.jsonl",
+      "source_sha256": "23db423bf9694906efa8d7a3ed1038f0345898d05ca8949d73386f7195bd2d3f",
+      "destination_sha256": "23db423bf9694906efa8d7a3ed1038f0345898d05ca8949d73386f7195bd2d3f",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/translation-cache.sqlite3",
+      "destination": "historico/avaliador/translation-cache.sqlite3",
+      "source_sha256": "ecfa762085b5300eb3e29c821645ee5f2ae45487cf5e9ebb60992bf2a66832b3",
+      "destination_sha256": "94e2d3e50620bcd60ee9c15f8e685d69886a315c1eb76db478c6402656fbb665",
+      "method": "sqlite_backup"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_colbert_en.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_colbert_en.jsonl",
+      "source_sha256": "dcfda8e50ed1b545e9fc68b24875f208137d79ba9595761a351efc4fdc56f406",
+      "destination_sha256": "dcfda8e50ed1b545e9fc68b24875f208137d79ba9595761a351efc4fdc56f406",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_colbert_qwen.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_colbert_qwen.jsonl",
+      "source_sha256": "71d8ca765001c1441ea0a1fb0ecc89b1771222b1de0204712c131fb6d956ca57",
+      "destination_sha256": "71d8ca765001c1441ea0a1fb0ecc89b1771222b1de0204712c131fb6d956ca57",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_hibrida_gpu.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_hibrida_gpu.jsonl",
+      "source_sha256": "004b9f61c0a5376bc012877d47ca3402928a6b7a9b67fc59095fbc561ab9b58b",
+      "destination_sha256": "004b9f61c0a5376bc012877d47ca3402928a6b7a9b67fc59095fbc561ab9b58b",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_qwen_gpu.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_qwen_gpu.jsonl",
+      "source_sha256": "69399d5546656703cab669cd15bea99eb3039949a0d45139953c05b6a0918fc8",
+      "destination_sha256": "69399d5546656703cab669cd15bea99eb3039949a0d45139953c05b6a0918fc8",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_qwen_sentencas.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_qwen_sentencas.jsonl",
+      "source_sha256": "ed27de4bdc83433d5a6ffc86b95699a4fc18cc7c1baaccba3a35cac95d1bd461",
+      "destination_sha256": "ed27de4bdc83433d5a6ffc86b95699a4fc18cc7c1baaccba3a35cac95d1bd461",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_ultrabert_en.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_ultrabert_en.jsonl",
+      "source_sha256": "72a3c11100b36d97946ca178baa96706776b11ca5381c2c03a7b53de01a4a9de",
+      "destination_sha256": "72a3c11100b36d97946ca178baa96706776b11ca5381c2c03a7b53de01a4a9de",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_ultrabert_hibrida_qwen.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_ultrabert_hibrida_qwen.jsonl",
+      "source_sha256": "1b1a60a548b520a2bed13bdede9ff6005f6468a314977d1798e2fd826f6d6b28",
+      "destination_sha256": "1b1a60a548b520a2bed13bdede9ff6005f6468a314977d1798e2fd826f6d6b28",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_ultrabert_mixedbread_en.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_ultrabert_mixedbread_en.jsonl",
+      "source_sha256": "ac95f04c843a1e458bf95c4b222a961b1b4a0cae59c6d2fa222d73349faa4e4c",
+      "destination_sha256": "ac95f04c843a1e458bf95c4b222a961b1b4a0cae59c6d2fa222d73349faa4e4c",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_ultrabert_mixedbread_qwen.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_ultrabert_mixedbread_qwen.jsonl",
+      "source_sha256": "b962a6390c858550c42229cf077cd4b11175c2e989740e24f68b794d882a9765",
+      "destination_sha256": "b962a6390c858550c42229cf077cd4b11175c2e989740e24f68b794d882a9765",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_union15_ultrabert_mixedbread_qwen.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_union15_ultrabert_mixedbread_qwen.jsonl",
+      "source_sha256": "40b2ebcd714cb2e7ea4995b9cf9807c665445b08db7e535fa1b8d67eb9d78045",
+      "destination_sha256": "40b2ebcd714cb2e7ea4995b9cf9807c665445b08db7e535fa1b8d67eb9d78045",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_weighted_a08_mixedbread_en.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_weighted_a08_mixedbread_en.jsonl",
+      "source_sha256": "760958cb979d48c23b874c5319238f0595a6303dca064cc25cf094a9df94538b",
+      "destination_sha256": "760958cb979d48c23b874c5319238f0595a6303dca064cc25cf094a9df94538b",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/amostra_weighted_a08_sem_rerank_en.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/amostra_weighted_a08_sem_rerank_en.jsonl",
+      "source_sha256": "6d105dd892dcf6d55c7c978b687d14fbc810948a2d40653b2bfffa7ddc17b804",
+      "destination_sha256": "6d105dd892dcf6d55c7c978b687d14fbc810948a2d40653b2bfffa7ddc17b804",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/avaliacao.html",
+      "destination": "fase1_referencia/legado_sentencial/processed/avaliacao.html",
+      "source_sha256": "42e43abbe4e2a919795fe8319f1a614e968e74684ff70c3df4975505ea4ef056",
+      "destination_sha256": "42e43abbe4e2a919795fe8319f1a614e968e74684ff70c3df4975505ea4ef056",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/pipeline_input.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/pipeline_input.jsonl",
+      "source_sha256": "9d391a9c1f68094e8cd8c69171f9839fad86ef635887482da395e4bbe21b8abc",
+      "destination_sha256": "9d391a9c1f68094e8cd8c69171f9839fad86ef635887482da395e4bbe21b8abc",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/retrieval_ready.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/retrieval_ready.jsonl",
+      "source_sha256": "c3ef8ad16f6ea86895d0f611a35a34f5311f2d4d46a75539d4dc94c9d72c7f8f",
+      "destination_sha256": "c3ef8ad16f6ea86895d0f611a35a34f5311f2d4d46a75539d4dc94c9d72c7f8f",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/union_teste_02.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/union_teste_02.jsonl",
+      "source_sha256": "b077a23bc7c60f0f407942839dce86af98f391a67c1c92a7b1f634f6b36fe405",
+      "destination_sha256": "b077a23bc7c60f0f407942839dce86af98f391a67c1c92a7b1f634f6b36fe405",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/processed/weighted_a08_qwen.jsonl",
+      "destination": "fase1_referencia/legado_sentencial/processed/weighted_a08_qwen.jsonl",
+      "source_sha256": "61efcf0a01f611a1f7408e982eb575375f7d83d34ef680b5f4b6d93c200fe9f1",
+      "destination_sha256": "61efcf0a01f611a1f7408e982eb575375f7d83d34ef680b5f4b6d93c200fe9f1",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/data/annotations/retrieval.sqlite3",
+      "destination": "fase1_referencia/legado_sentencial/annotations/retrieval.sqlite3",
+      "source_sha256": "5e0afe886deccb50c9e20450696c56c73747e54d908be9086babcb5c2ceaa4ab",
+      "destination_sha256": "974cbf55d6b918b7907617b6b841f38157171c046705fe829a0bf6df8a6185e8",
+      "method": "sqlite_backup"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/revisao_evidencias (1).json",
+      "destination": "fase1_referencia/legado_sentencial/revisao_evidencias.json",
+      "source_sha256": "c490944b0b8c1985d833a69835b72021625d919fefa00b0ce7e7beb1f583f3de",
+      "destination_sha256": "c490944b0b8c1985d833a69835b72021625d919fefa00b0ce7e7beb1f583f3de",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/claim_ineligibilities_v62.jsonl",
+      "destination": "fase2_injecao/provisorios/claim_ineligibilities_v62.jsonl",
+      "source_sha256": "b8adae9888e8dfa81139e2ff91109d7b1ce1e404ae76cc0c88ecd9d17680385c",
+      "destination_sha256": "b8adae9888e8dfa81139e2ff91109d7b1ce1e404ae76cc0c88ecd9d17680385c",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/claim_versions_v62.jsonl",
+      "destination": "fase2_injecao/provisorios/claim_versions_v62.jsonl",
+      "source_sha256": "cc9a55cae8ba8f10df6d9333367b6df093924e8c310045cf1501b327effaeae7",
+      "destination_sha256": "cc9a55cae8ba8f10df6d9333367b6df093924e8c310045cf1501b327effaeae7",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/demo_pairs.jsonl",
+      "destination": "fase2_injecao/provisorios/demo_pairs.jsonl",
+      "source_sha256": "3f1fd07edc5bc7ea6fe6996bb69025125fecd5a86921419741a1a6d4b64aa183",
+      "destination_sha256": "3f1fd07edc5bc7ea6fe6996bb69025125fecd5a86921419741a1a6d4b64aa183",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/demo_rejected.jsonl",
+      "destination": "fase2_injecao/provisorios/demo_rejected.jsonl",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/govreport_source.jsonl",
+      "destination": "fase2_injecao/provisorios/govreport_source.jsonl",
+      "source_sha256": "0a2666d70b667f5fb2391a40ccff1c9957e8e66bdfc04227dfc9783e55bdcefd",
+      "destination_sha256": "0a2666d70b667f5fb2391a40ccff1c9957e8e66bdfc04227dfc9783e55bdcefd",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/propostas_claims_v62.html",
+      "destination": "fase2_injecao/provisorios/propostas_claims_v62.html",
+      "source_sha256": "51a4a1d975c086e2cbcb687956247dc223dd7424ec2b4272d2e03f0f43bab90d",
+      "destination_sha256": "51a4a1d975c086e2cbcb687956247dc223dd7424ec2b4272d2e03f0f43bab90d",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/propostas_v61.html",
+      "destination": "fase2_injecao/provisorios/propostas_v61.html",
+      "source_sha256": "679ecd238ea5fd291b8a4321a8a90f6a026b270b3d826eee92d0951fcdba2785",
+      "destination_sha256": "679ecd238ea5fd291b8a4321a8a90f6a026b270b3d826eee92d0951fcdba2785",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/selecao_resumos_v63.html",
+      "destination": "fase2_injecao/provisorios/selecao_resumos_v63.html",
+      "source_sha256": "e412d9d352a5f10294421d4b8160b072255243cf8fc20c31600722c6f604a666",
+      "destination_sha256": "e412d9d352a5f10294421d4b8160b072255243cf8fc20c31600722c6f604a666",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/sentence_candidates.audit.json",
+      "destination": "fase2_injecao/provisorios/sentence_candidates.audit.json",
+      "source_sha256": "967282ff102ab8981dfb2e2c66de6a7210b20d139b4bf122be702448fc3e54d1",
+      "destination_sha256": "967282ff102ab8981dfb2e2c66de6a7210b20d139b4bf122be702448fc3e54d1",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/sentence_candidates.jsonl",
+      "destination": "fase2_injecao/provisorios/sentence_candidates.jsonl",
+      "source_sha256": "bc5903cfeabce797cb84aba037a3d39fc3a48fba08897662b0a0ff8719db0113",
+      "destination_sha256": "bc5903cfeabce797cb84aba037a3d39fc3a48fba08897662b0a0ff8719db0113",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/sentence_proposals.jsonl",
+      "destination": "fase2_injecao/provisorios/sentence_proposals.jsonl",
+      "source_sha256": "4c06edb65ef972f34097728dc068c68118ef513fc83e3eb55699f64ce90e587b",
+      "destination_sha256": "4c06edb65ef972f34097728dc068c68118ef513fc83e3eb55699f64ce90e587b",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/sentence_proposals_v61.jsonl",
+      "destination": "fase2_injecao/provisorios/sentence_proposals_v61.jsonl",
+      "source_sha256": "dfd08f8cd95cba84e82b22253025f7cf3ed23aebb6abde6347f72d5bcd635031",
+      "destination_sha256": "dfd08f8cd95cba84e82b22253025f7cf3ed23aebb6abde6347f72d5bcd635031",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/sentence_rejections.jsonl",
+      "destination": "fase2_injecao/provisorios/sentence_rejections.jsonl",
+      "source_sha256": "b8df496589427953f315f11916187f4b78d68f3f5602378d3f066820de7ea87b",
+      "destination_sha256": "b8df496589427953f315f11916187f4b78d68f3f5602378d3f066820de7ea87b",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/sentence_rejections_v61.jsonl",
+      "destination": "fase2_injecao/provisorios/sentence_rejections_v61.jsonl",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/Gerador_Estatico_V6_Implementacao/gerador_estatico_v6/output/govreport_source.jsonl",
+      "destination": "fase1_referencia/dados/govreport_source.jsonl",
+      "source_sha256": "0a2666d70b667f5fb2391a40ccff1c9957e8e66bdfc04227dfc9783e55bdcefd",
+      "destination_sha256": "0a2666d70b667f5fb2391a40ccff1c9957e8e66bdfc04227dfc9783e55bdcefd",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/output/resumo_entidade.txt",
+      "destination": "fase2_injecao/selecoes/resumo_entidade.txt",
+      "source_sha256": "d5b6fb6f2d3b79e120df9099b464c428589f213970d0491b173699e79b9a2e3e",
+      "destination_sha256": "d5b6fb6f2d3b79e120df9099b464c428589f213970d0491b173699e79b9a2e3e",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-injector-ui/output/selecao_inconsistencias.json",
+      "destination": "fase2_injecao/selecoes/selecao_inconsistencias.json",
+      "source_sha256": "9d2b274cfd47f3fe524a582bb95cfc4fa58df9b7ec60e3ea4b678f1fdcc34482",
+      "destination_sha256": "9d2b274cfd47f3fe524a582bb95cfc4fa58df9b7ec60e3ea4b678f1fdcc34482",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/imports/selecao_v63_20261111.csv",
+      "destination": "fase3_pipeline/entradas/selecao_v63_20261111.csv",
+      "source_sha256": "b1cbb258f7d318305fd5284317613adb3443e52ef4ddb596798aaab143545213",
+      "destination_sha256": "b1cbb258f7d318305fd5284317613adb3443e52ef4ddb596798aaab143545213",
+      "method": "copy"
+    },
+    {
+      "source": "/home/cassiosilva/factual-consistency-evaluation/outputs/imports/selecao_v63_20261111.manifest.json",
+      "destination": "fase3_pipeline/entradas/selecao_v63_20261111.manifest.json",
+      "source_sha256": "7f3b6be3384028610c817003d9d79e4b6485a826a7a74418a16d00f3eddc9af8",
+      "destination_sha256": "7f3b6be3384028610c817003d9d79e4b6485a826a7a74418a16d00f3eddc9af8",
+      "method": "copy"
+    }
+  ],
+  "module_mapping": {
+    "modules": {
+      "reference.translation": "fase1_referencia.translation",
+      "reference.review_server": "fase1_referencia.review_server",
+      "reference.preparation": "fase1_referencia.preparation",
+      "reference.export": "fase1_referencia.export",
+      "reference.sampling": "fase1_referencia.sampling",
+      "reference.qwen": "fase1_referencia.qwen",
+      "reference.html": "fase1_referencia.html",
+      "reference.model_suggestions": "fase1_referencia.model_suggestions",
+      "reference.translation_quality": "fase1_referencia.translation_quality",
+      "claims.enriched": "fase3_pipeline.claims.enriched",
+      "claims.model": "fase3_pipeline.claims.model",
+      "claims.extraction": "fase3_pipeline.claims.extraction",
+      "retrieval.pipeline": "fase3_pipeline.retrieval.pipeline",
+      "nli.model": "fase3_pipeline.nli.model",
+      "nli.evaluation": "fase3_pipeline.nli.evaluation",
+      "data.injection": "fase2_injecao.injection",
+      "data.validation": "fase2_injecao.validation",
+      "data.external_summaries": "fase2_injecao.external_summaries",
+      "taxonomy.classification": "avaliacao_automatica.taxonomy.classification"
+    },
+    "scripts": {
+      "fase1_referencia": [
+        "prepare_reference.py",
+        "sample_reference.py",
+        "generate_review_html.py",
+        "export_reference.py",
+        "serve_review.py",
+        "suggest_reference_nli.py",
+        "translate_reference.py",
+        "verify_translation.py"
+      ],
+      "fase2_injecao": [
+        "generate_dataset.py",
+        "audit_injections.py",
+        "import_selected_summaries.py"
+      ],
+      "fase3_pipeline": [
+        "extract_claims.py",
+        "retrieve_evidence.py",
+        "evaluate_nli.py",
+        "run_pipeline.py"
+      ],
+      "avaliacao_automatica": [
+        "classify_errors.py",
+        "audit_qwen.py"
+      ]
+    }
+  }
+}

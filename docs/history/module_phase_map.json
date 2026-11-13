@@ -1,0 +1,50 @@
+{
+  "modules": {
+    "reference.translation": "fase1_referencia.translation",
+    "reference.review_server": "fase1_referencia.review_server",
+    "reference.preparation": "fase1_referencia.preparation",
+    "reference.export": "fase1_referencia.export",
+    "reference.sampling": "fase1_referencia.sampling",
+    "reference.qwen": "fase1_referencia.qwen",
+    "reference.html": "fase1_referencia.html",
+    "reference.model_suggestions": "fase1_referencia.model_suggestions",
+    "reference.translation_quality": "fase1_referencia.translation_quality",
+    "claims.enriched": "fase3_pipeline.claims.enriched",
+    "claims.model": "fase3_pipeline.claims.model",
+    "claims.extraction": "fase3_pipeline.claims.extraction",
+    "retrieval.pipeline": "fase3_pipeline.retrieval.pipeline",
+    "nli.model": "fase3_pipeline.nli.model",
+    "nli.evaluation": "fase3_pipeline.nli.evaluation",
+    "data.injection": "fase2_injecao.injection",
+    "data.validation": "fase2_injecao.validation",
+    "data.external_summaries": "fase2_injecao.external_summaries",
+    "taxonomy.classification": "avaliacao_automatica.taxonomy.classification"
+  },
+  "scripts": {
+    "fase1_referencia": [
+      "prepare_reference.py",
+      "sample_reference.py",
+      "generate_review_html.py",
+      "export_reference.py",
+      "serve_review.py",
+      "suggest_reference_nli.py",
+      "translate_reference.py",
+      "verify_translation.py"
+    ],
+    "fase2_injecao": [
+      "generate_dataset.py",
+      "audit_injections.py",
+      "import_selected_summaries.py"
+    ],
+    "fase3_pipeline": [
+      "extract_claims.py",
+      "retrieve_evidence.py",
+      "evaluate_nli.py",
+      "run_pipeline.py"
+    ],
+    "avaliacao_automatica": [
+      "classify_errors.py",
+      "audit_qwen.py"
+    ]
+  }
+}

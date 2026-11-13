@@ -35,3 +35,11 @@ outputs/**
 .~lock.*
 anotacoes_*.json
 revisao_*.json
+
+# Local data preserved by the phase migration
+/historico/
+/fase1_referencia/dados/
+/fase1_referencia/legado_sentencial/
+/fase2_injecao/provisorios/
+/fase2_injecao/selecoes/
+/fase3_pipeline/entradas/

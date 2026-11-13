@@ -6,7 +6,7 @@ preparation:
   dense_pool: 20
   bm25_pool: 20
   rerank_pool: 35
-  variantes: ''
+  variantes: original
   max_registros: 0
   max_claims: 0
   backend: hf

@@ -3,6 +3,32 @@
 A interface inicia em **Auditoria completa**, com uma afirmação por vez. O modo
 **Triagem rápida · opcional** continua disponível para decisões preliminares.
 
+## Usar a versão HTML
+
+A interface é HTML, CSS e JavaScript, independente de Streamlit. Uma versão com
+a amostra de cinco documentos e as traduções existentes está em
+`outputs/runs/auditoria-html-20261106/review-html/avaliacao.html`.
+
+Para abrir essa versão e continuar o arquivo de análises do GovReport:
+
+```bash
+conda activate nlp_mestrado
+python scripts/serve_review.py \
+  --html outputs/runs/auditoria-html-20261106/review-html/avaliacao.html \
+  --annotations outputs/annotations/govreport5/revisao.json \
+  --open
+```
+
+O pequeno serviço Python serve o HTML e grava o JSON; não executa modelos.
+Mantenha o terminal aberto e use `http://127.0.0.1:8765/`. A confirmação
+**Salvo em arquivo ✓** indica gravação no computador. Se já existe um serviço
+usando esse arquivo, aguarde a gravação, encerre-o com Ctrl+C e execute o comando.
+Caso use outro arquivo de anotações, mantenha o caminho que já utiliza.
+
+Abrir o HTML diretamente também permite revisar e exportar JSON, mas nesse modo
+o salvamento automático fica no navegador. Para migrar essas análises ao arquivo,
+exporte o JSON na janela antiga e importe na interface servida pelo Python.
+
 ## Os três passos
 
 1. **Confira a afirmação.** Leia a tradução e o inglês original. Compare com a
@@ -49,6 +75,34 @@ evidências, avisos e indicadores de salvamento. A troca não modifica a revisã
   progresso. “Revisada” não significa que a claim entrou automaticamente no gold.
 - As colunas laterais têm rolagem própria em telas grandes; em telas menores,
   os painéis são empilhados. Português e inglês continuam disponíveis.
+
+## Progresso, pendências e atalhos
+
+O painel **Seu progresso na amostra** conta a amostra inteira, independentemente
+dos filtros de busca da fila: total, concluídas sem pendência de preenchimento,
+em andamento e não iniciadas. Uma revisão finalizada que passe a ter campos
+incompletos volta a aparecer na central. Uma revisão inválida justificada pode
+estar concluída, mas continua fora do gold. Os números não substituem a validação
+do exportador e não medem acurácia factual.
+
+A **Central de pendências** mostra o motivo por claim: extração, decisão,
+evidências, conferência do documento, busca, seleção não confirmada, justificativa
+de extração inválida ou conclusão. Há filtros e páginas de 30 itens. Clicar em
+uma pendência abre a auditoria completa e limpa os filtros da fila para que a
+claim fique visível. **Continuar pendências** e **Próxima pendente** percorrem
+essas pendências, incluindo análises iniciadas e casos com triagem.
+
+Os atalhos **J/K** navegam na fila filtrada; **N** abre a próxima pendência da
+amostra; **/** busca claims; **F** busca na fonte; **?** mostra a ajuda. Eles não
+atuam durante digitação em campos, em texto editável ou com Ctrl/Alt/Meta. As
+teclas **1–4** preservam as decisões preliminares apenas na triagem rápida.
+Nenhum atalho atribui decisão factual ou conclui a auditoria completa.
+
+Uma cópia atualizada com a mesma amostra e traduções está em
+`outputs/runs/auditoria-progresso-20261106/review-html/avaliacao.html`.
+Para continuar com o mesmo arquivo de anotações, prefira reiniciar o servidor
+com o comando anterior e atualizar a página: ele incorpora o modelo atualizado
+mesmo quando recebe um HTML antigo. Não é necessário refazer o pipeline.
 
 ## Salvar não é concluir
 

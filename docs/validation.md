@@ -1,5 +1,35 @@
 # Validações executadas na migração
 
+## Versão HTML independente de Streamlit — 6 de novembro de 2026
+
+Gerada em `outputs/runs/auditoria-html-20261106/review-html/avaliacao.html`,
+reutilizando o modelo HTML existente. Payload comparado integralmente com a
+versão anterior: documentos, claims, candidatos, traduções e seleção idênticos.
+O JSON existente `outputs/annotations/govreport5/revisao.json` tem dataset e
+seleção compatíveis e não foi alterado.
+
+Teste de abertura no Firefox isolado com servidor em porta temporária:
+três colunas e painel de progresso visíveis, nota gravada em JSON temporário e
+recuperada após recarregar, sem atribuição automática de rótulo factual.
+Prévia em `outputs/previews/auditoria-html-20261106.png`.
+
+## Progresso e central de pendências — 6 de novembro de 2026
+
+| Verificação | Resultado |
+|---|---|
+| Suíte offline | 60 testes: 48 aprovados, 12 integrações opt-in ignoradas |
+| Navegador | 9 testes aprovados no Firefox 159.0.1; os 5 testes de usabilidade foram repetidos após ampliar a verificação de revisões editadas |
+| Pendências | Filtro por motivo, navegação direta, limpeza de filtros conflitantes e retorno de revisão finalizada com campos incompletos verificados |
+| Atalhos | Navegação J/K, busca e ajuda; bloqueio durante digitação; anotações preservadas |
+| Regressão | Conclusão, claim inválida, temas, layout móvel, busca bilíngue, exportação/importação e salvamento em disco aprovados |
+| Amostra existente | HTML gerado com 5 documentos, 457 claims e 14.341 candidatos; painel conta as 200 claims selecionadas |
+| Inspeção visual | `outputs/previews/auditoria-progresso-20261106.png`; Firefox isolado, sem usar as anotações do pesquisador; sem transbordamento horizontal em 1600 px |
+
+Os testes usam dados sintéticos e arquivos temporários. Somente a geração do
+HTML e sua apresentação foram executadas sobre os dados existentes; nenhum
+modelo ou componente científico foi reexecutado. O painel mede preenchimento,
+não elegibilidade definitiva para gold nem correção factual.
+
 ## Temas claro e escuro — 5 de novembro de 2026
 
 O cabeçalho da auditoria permite alternar temas e guarda a preferência no
@@ -107,3 +137,13 @@ As fixtures históricas versionadas contêm probabilidades e parâmetros, sem te
 Pendências: inferência neural real T5/NLI; reprodução de recuperação e taxonomia com modelos reais; instalação limpa de todas as dependências em outro ambiente; revisão da combinação spaCy/modelo sm observada; auditoria semântica das injeções; referência humana finalizada; implementação das avaliações científicas E0–E6. Nenhum desses itens é declarado aprovado por esta migração.
 
 A igualdade de AST registrada em scientific_implementation_audit.json cobre 130 definições preservadas. Outras 12 foram adaptadas para execução/configuração/proveniência; 29 definições de componentes não necessários não foram incorporadas. Esses números se referem aos arquivos selecionados no mapeamento e não constituem cobertura de testes ou validação semântica.
+# Validação integrada — 12/11/2026
+
+- Suíte completa: 101 testes descobertos, 89 aprovados, 12 integrações opcionais ignoradas, nenhuma falha. Os testes novos cobrem revisão/correção/adição, conservação do extrator, persistência/retomada/conflito, geração em fila, pré-aprovação, congelamento, integridade, materialização sem rótulos, abstenções, conjuntos múltiplos, segmentações distintas, índices NLI nulos e separação por documento.
+- Navegador: fluxo sintético de revisão da claim, conjunto suficiente, decisão factual, geração estática, confirmação da relação alterada, congelamento e materialização. A interface real do documento GovReport também foi aberta sem criar validações humanas.
+- Modelos reais: piloto sintético com um controle e uma alteração numérica, nas condições E0–E3. Oito decisões experimentais, relatório final e hashes de artefatos foram produzidos. O relatório tem `SYNTHETIC_SMOKE_ONLY`; não é avaliação de qualidade factual em GovReport.
+- Alinhador: seis casos controlados de protocolo, seis status esperados atendidos, duas correspondências, cobertura de decisão 4/6 e abstenção 2/6. A confirmação semântica por modelos não foi calibrada nem validada em coleção humana independente.
+- Reprodução: relatório regenerado a partir de `decisions.jsonl` após verificação do hash, sem repetir inferência.
+- Dados reais: preparação nova do original reutilizou 23 claims e gerou 725 candidatos em um documento, sem alterar as anotações históricas.
+
+Comandos e limites no [guia integrado](integrated-validation.md). Dados de revisão, snapshots e relatórios locais permanecem fora do Git.

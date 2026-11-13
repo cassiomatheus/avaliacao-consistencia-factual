@@ -18,6 +18,7 @@ dependencies = [
 [project.optional-dependencies]
 injection = ["datasets==5.0.1", "lemminflect==0.2.3"]
 reference = ["scikit-learn==1.5.0"]
+controlled = ["fastcoref==2.1.6"]
 audit = ["ollama==0.6.3", "pydantic==2.13.4"]
 browser-tests = ["selenium==4.51.0"]
 
@@ -31,4 +32,4 @@ license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
 where = ["src"]
 
 [tool.setuptools.package-data]
-factual_eval = ["resources/*.json", "resources/*.yaml", "reference/*.html", "reference/*.js"]
+factual_eval = ["resources/*.json", "resources/*.yaml", "reference/*.html", "reference/*.js", "fase1_referencia/*.html", "fase1_referencia/*.js", "fase2_injecao/controlled/*.js"]

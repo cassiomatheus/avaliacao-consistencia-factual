@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
-"""Entry point for suggest-reference."""
+"""Compatibility launcher; canonical: scripts/fase1_referencia/suggest_reference_nli.py."""
 from pathlib import Path
-import sys
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
-from factual_eval.cli import main
-
+import runpy
 if __name__ == '__main__':
-    raise SystemExit(main('suggest-reference'))
+    runpy.run_path(str(Path(__file__).resolve().parents[1] / 'fase1_referencia' / 'suggest_reference_nli.py'), run_name='__main__')

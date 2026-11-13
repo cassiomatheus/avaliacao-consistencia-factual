@@ -57,7 +57,7 @@ def load_config(path=None, reference=False):
                 if isinstance(value, (int, float)) and not isinstance(value, bool) and not math.isfinite(value):
                     raise ValueError(f'Non-finite parameter: {section}.{name}')
         r = config['retrieval']
-        for key in ('sentence_top_k','window_top_k','semantic_pool','lexical_pool','max_coref_variants'):
+        for key in ('sentence_top_k','window_top_k','semantic_pool','lexical_pool','max_coref_variants','rrf_k'):
             if not isinstance(r[key], int) or isinstance(r[key], bool) or r[key] < 1:
                 raise ValueError(f'retrieval.{key} must be a positive integer')
         if not isinstance(r['context_radius'], int) or r['context_radius'] < 0:

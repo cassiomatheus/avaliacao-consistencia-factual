@@ -9,7 +9,7 @@ from _support import ROOT
 from factual_eval.reference.html import jsonl, run as html_run
 from factual_eval.reference.export import validate
 from factual_eval.reference.translation import (Cache, OllamaTranslator, collect_units,
-    digest, load_translations, segments, translate_reference)
+    digest, load_translations, segments, translate_reference, revise_flagged_translations)
 from factual_eval.reference.translation_quality import quality_warnings
 
 
@@ -147,6 +147,48 @@ class TranslationTests(unittest.TestCase):
         units=collect_units(self.raw)
         self.assertEqual({u['unit_id'] for u in units if u['kind']=='sentence'}, {'doc1:S00001','doc1:S00002'})
         self.assertFalse(any(rows[1]['claim_id'] in u['unit_id'] for u in units))
+
+    def test_fidelity_revision_preserves_originals_human_work_and_incomplete_output(self):
+        rows, _ = self.translate('initial')
+        source = self.root/'initial'/'translations.jsonl'
+        for row in rows:
+            for part in row['segments']:
+                if part['source_en'] == EN1:
+                    part.update(translation_pt=PT1.replace('2018', '2019'),
+                                status='needs_review', warnings=['Possível diferença numérica ou de data.'])
+                else:
+                    part['status']='human_verified'
+        source.write_text(''.join(json.dumps(r)+'\n' for r in rows))
+        before=source.read_bytes()
+        class Reviser(FakeTranslator):
+            def revise(self, source, translated, context, glossary, warnings):
+                self.calls.append(source)
+                return PT1, 'stop'
+        translator=Reviser()
+        revise_flagged_translations(self.root/'initial',self.root/'revised',translator)
+        revised=jsonl(self.root/'revised'/'translations.jsonl')
+        self.assertTrue(translator.calls)
+        self.assertTrue(all(s==EN1 for s in translator.calls))
+        self.assertEqual(source.read_bytes(),before)
+        for row in revised:
+            self.assertEqual(row['source_en'], next(r['source_en'] for r in rows if r['unit_id']==row['unit_id']))
+            for part in row['segments']:
+                if part['source_en']==EN1:
+                    self.assertEqual(part['translation_pt'],PT1)
+                    self.assertIn('2019',part['fidelity_revision']['initial_translation_pt'])
+                else:
+                    self.assertEqual(part['status'],'human_verified')
+        with patch.object(translator,'revise',return_value=('Texto truncado', 'length')):
+            revise_flagged_translations(self.root/'initial',self.root/'incomplete',translator)
+        failed=jsonl(self.root/'incomplete'/'translations.jsonl')
+        self.assertTrue(any('fidelity_revision_error' in p for r in failed for p in r['segments']))
+        self.assertFalse(any(p['translation_pt']=='Texto truncado' for r in failed for p in r['segments']))
+        fresh=FakeTranslator()
+        revise_flagged_translations(self.root/'initial',self.root/'source-only',fresh,source_only_critical=True)
+        self.assertTrue(fresh.calls)
+        self.assertTrue(all(text==EN1 and context=='' for text,context in fresh.calls))
+        source_only=jsonl(self.root/'source-only'/'translations.jsonl')
+        self.assertTrue(all(p['status']=='human_verified' for r in source_only for p in r['segments'] if p['source_en']==EN2))
 
     def test_html_validates_translation_identity_and_gold_stays_human(self):
         self.translate('translated')

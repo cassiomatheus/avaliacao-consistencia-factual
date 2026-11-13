@@ -1,0 +1,8 @@
+[
+  {"case_id":"exact","target":"FDA funded 20 schools.","candidates":[{"claim_id":"p","claim":"FDA funded 20 schools."}],"expected_status":"MATCHED","expected_claim_ids":["p"]},
+  {"case_id":"ambiguous","target":"FDA acted.","candidates":[{"claim_id":"p","claim":"FDA acted."},{"claim_id":"q","claim":"FDA acted."}],"expected_status":"AMBIGUOUS"},
+  {"case_id":"omitted","target":"FDA acted.","candidates":[],"extraction_complete":true,"expected_status":"OMITTED"},
+  {"case_id":"composition","target":"FDA acted. USDA agreed.","candidates":[{"claim_id":"p","claim":"FDA acted."},{"claim_id":"q","claim":"USDA agreed."}],"expected_status":"MATCHED","expected_claim_ids":["p","q"]},
+  {"case_id":"partial","target":"FDA acted. USDA agreed.","candidates":[{"claim_id":"p","claim":"FDA acted."}],"expected_status":"PARTIAL_MATCH"},
+  {"case_id":"number_change","target":"FDA funded 20 schools.","candidates":[{"claim_id":"p","claim":"FDA funded 21 schools."}],"expected_status":"NOT_EVALUABLE"}
+]

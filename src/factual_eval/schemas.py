@@ -2,6 +2,8 @@
 from collections import Counter
 import hashlib
 import json
+import math
+from numbers import Real
 import re
 from pathlib import Path
 
@@ -173,6 +175,13 @@ def carry_claim_ids(input_path, output_path):
         row['claim_id']=source.get('claim_id') or f'{did}:{row["tipo_resumo"]}:C{seen[(did,row["tipo_resumo"])]:05d}'
         row['summary_sentence_id']=source.get('summary_sentence_id')
         index=row.get('source_sentence_index',-1)
+        # Parquet/pandas promotes nullable mixed integer columns to floating point.
+        # A missing anchor denotes a joint reference set, never source sentence 0.
+        if index is None or (isinstance(index,float) and math.isnan(index)):
+            index=-1
+        if isinstance(index,bool) or not isinstance(index,Real) or not math.isfinite(index) or int(index)!=index:
+            raise ValueError('Invalid NLI source sentence anchor')
+        index=int(index)
         row['source_sentence_id']=f'{did}:S{index+1:05d}' if index >= 0 else None
     if len({r['claim_id'] for r in rows}) != len(rows):
         raise ValueError('Duplicate claim IDs after NLI')

@@ -34,12 +34,14 @@ retrieval:
   window_top_k: 4
   semantic_pool: 30
   lexical_pool: 30
+  rrf_k: 60
   context_radius: 2
   max_coref_variants: 4
   use_mmr: false
   mmr_lambda: 0.85
   max_window_overlap: 0.8
   context_rerank_weight: 0.30
+  # Legacy evidence-quality signal for NLI; candidate ranking uses RRF.
   semantic_weight: 0.60
   lexical_weight: 0.25
   entity_weight: 0.15

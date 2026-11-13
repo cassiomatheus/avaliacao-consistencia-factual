@@ -92,12 +92,14 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 *{scrollbar-color:var(--scroll-thumb) var(--scroll-track);scrollbar-width:thin}::-webkit-scrollbar{width:9px;height:9px}::-webkit-scrollbar-track{background:var(--scroll-track)}::-webkit-scrollbar-thumb{background:var(--scroll-thumb);border:2px solid var(--scroll-track);border-radius:9px}
 .theme-toggle{white-space:nowrap}.theme-toggle .theme-icon{font-size:17px;line-height:1;margin-right:5px}
 
+.audit-overview{max-width:1666px;margin:16px auto;padding:14px;background:var(--surface);border:1px solid var(--edge);border-radius:12px}.overview-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0}.overview-stat{background:var(--surface-soft);padding:10px;border-radius:8px}.overview-stat strong{display:block;font-size:23px}.pending-tools{display:flex;gap:10px;align-items:end;flex-wrap:wrap}.pending-tools label{flex:1;min-width:180px}.pending-list{max-height:300px;overflow:auto;margin-top:12px}.pending-entry{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--edge);padding:12px;background:var(--surface);color:var(--ink)}.pending-entry:hover{background:var(--surface-soft)}.pending-entry small{display:block;color:var(--muted)}kbd{display:inline-block;border:1px solid var(--edge);border-radius:4px;padding:0 5px;font:12px ui-monospace,monospace;background:var(--surface-soft);color:var(--ink)}.shortcut-list{display:flex;flex-wrap:wrap;gap:10px 20px;padding:12px 0}@media(max-width:700px){.audit-overview{margin:12px 17px}.overview-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
 <script type="application/json" id="dataset">__DATASET_JSON__</script>
 <header><div class="topbar"><div class="brand">Auditoria seletiva de evidências<small>Leia a afirmação, confira a fonte e registre sua análise.</small></div><label>Revisor<input id="reviewer" type="text" placeholder="Identificação"></label><label>Visualização<select id="languageView"><option value="bilingual">Bilíngue</option><option value="pt">Somente português</option><option value="en">Somente inglês</option></select></label><button id="themeToggle" class="btn white theme-toggle" type="button" aria-label="Tema atual: claro. Ativar tema escuro." title="Alternar entre tema claro e escuro"><span id="themeIcon" class="theme-icon" aria-hidden="true">☾</span><span id="themeLabel">Tema escuro</span></button><div class="push"></div><div class="save-group"><span id="savedStatus" class="small" role="status">As alterações são salvas automaticamente.</span><span id="diskSaveStatus" class="small" role="status" hidden></span></div><button id="diskSaveNow" class="btn white" hidden>Salvar agora</button><button id="importBtn" class="btn">Importar revisão</button><input type="file" accept="application/json,.json" id="importFile" hidden><button id="exportBtn" class="btn white">Exportar revisão (.json)</button></div></header>
 <div id="diskConflict" class="notice" style="margin:12px 17px" hidden>Há análises diferentes no arquivo e neste navegador. Escolha qual continuar. Ao usar o navegador, a versão anterior do arquivo será guardada no histórico.<div class="row"><button id="diskUseFile" class="btn">Carregar arquivo salvo</button><button id="diskUseBrowser" class="btn">Usar anotações deste navegador</button></div></div>
+<section class="audit-overview" aria-labelledby="overviewTitle"><div class="space"><strong id="overviewTitle">Seu progresso na amostra</strong><button id="resumePending" class="btn primary">Continuar pendências →</button></div><div class="overview-stats" id="overviewStats"></div><p id="overviewSummary" class="small muted"></p><details id="pendingPanel"><summary>Central de pendências · veja o que falta em cada afirmação</summary><div class="pending-tools"><label class="field" for="pendingReason">Filtrar por pendência<select id="pendingReason"><option value="all">Todas</option><option value="unstarted">Ainda não iniciadas</option><option value="extraction">Conferir extração</option><option value="decision">Decisão factual</option><option value="evidence">Conjunto de evidências</option><option value="source">Conferir documento</option><option value="search">Concluir busca</option><option value="draft">Seleção não confirmada</option><option value="notes">Justificar extração inválida</option><option value="finish">Concluir revisão</option></select></label><button id="pendingPrev" class="btn">← Pendências</button><span id="pendingPage" class="small muted"></span><button id="pendingNext" class="btn">Pendências →</button></div><div id="pendingList" class="pending-list"></div></details><details id="shortcutsHelp"><summary>Atalhos de teclado</summary><div class="shortcut-list"><span><kbd>J</kbd> Próxima claim</span><span><kbd>K</kbd> Anterior</span><span><kbd>N</kbd> Próxima pendência</span><span><kbd>/</kbd> Buscar claims</span><span><kbd>F</kbd> Buscar na fonte</span><span><kbd>?</kbd> Mostrar atalhos</span><span><kbd>1</kbd>–<kbd>4</kbd> Somente na triagem rápida</span></div><p class="small muted">Atalhos de navegação não atuam durante a digitação. Nenhum atalho atribui rótulos na auditoria completa ou conclui sua revisão.</p></details></section>
 <div class="grid">
 <aside class="panel" id="queuePanel"><div class="head"><span>Afirmações para analisar</span><span id="selectedCount" class="pill"></span></div><div class="body" style="padding-bottom:8px">
  <label class="field" for="groupFilter">Quais afirmações mostrar?</label><select id="groupFilter"><option value="selected">Minha amostra selecionada</option><option value="A_ALEATORIA">A — Controle aleatório</option><option value="B_INCERTA">B — Incertas</option><option value="C_ESTRUTURAL">C — Estruturais</option><option value="not_selected">Não selecionadas</option><option value="all">Todas as claims</option></select>
@@ -191,7 +193,7 @@ function feedback(message,target){
  if(target){const button=document.createElement('button');button.className='btn';button.style.marginLeft='10px';button.textContent='Ver conjunto';button.dataset.jump=target;toast.appendChild(button)}
  toast.hidden=false;toastTimer=setTimeout(()=>{toast.hidden=true},6000);
 }
-function reviewChecks(c,a){
+function reviewChecks(c,a,working=state.working){
  const label=a.factual_label,sets=a.gold_evidence_sets||[];
  const validSets=sets.length>0&&sets.every(set=>Array.isArray(set)&&set.length&&new Set(set).size===set.length&&set.every(sid=>docOf(c).sentences.some(s=>s.sentence_id===sid)))&&new Set(sets.map(set=>[...set].sort().join('|'))).size===sets.length;
  const evidenceOK=label==='NOT_SUPPORTED'?sets.length===0:['SUPPORTED','CONTRADICTED'].includes(label)&&validSets;
@@ -201,7 +203,7 @@ function reviewChecks(c,a){
   {ok:evidenceOK,text:label==='NOT_SUPPORTED'?'Manter os conjuntos vazios para evidência insuficiente.':'Salvar pelo menos um conjunto de evidências válido.'},
   {ok:a.full_document_checked===true,text:'Conferir a fonte além dos trechos sugeridos.'},
   {ok:a.search_complete===true,text:'Confirmar que a busca por evidências terminou.'},
-  {ok:state.working.size===0,text:'Salvar o conjunto em montagem ou limpar a seleção.'},
+  {ok:working.size===0,text:'Salvar o conjunto em montagem ou limpar a seleção.'},
  ];
 }
 function updateWorkflow(){
@@ -231,8 +233,8 @@ function completeCurrentReview(){
 
 function annotation(id,create=true){let a=state.revision.claims[id];if(!a&&create){a={claim_valid:'',factual_label:'',full_document_checked:false,search_complete:false,notes:'',review_status:'PENDENTE',candidate_annotations:{},custom_sentence_ids:[],gold_evidence_sets:[],triage_status:'',triage_sentence_id:'',triage_utc:'',reviewed_by:'',updated_utc:''};state.revision.claims[id]=a}return a||null}
 function annCandidate(a,sid){a.candidate_annotations??={};return a.candidate_annotations[sid]??(a.candidate_annotations[sid]={relevance:'',relation:'',sufficient:'',notes:''})}
-function save(){state.revision.reviewer=el('reviewer').value.trim();const a=annotation(currentClaim().claim_id);a.reviewed_by=state.revision.reviewer;a.updated_utc=new Date().toISOString();state.revision.draft_sets??={};state.revision.draft_sets[currentClaim().claim_id]=[...state.working];try{localStorage.setItem(KEY,JSON.stringify(state.revision));el('savedStatus').textContent='Salvo no navegador ✓'}catch(e){el('savedStatus').textContent='⚠ Sem armazenamento local: exporte JSON!'}window.auditDisk?.changed();updateWorkflow();}
-function statusOf(c){const a=annotation(c.claim_id,false);if(a?.review_status==='FINALIZADO')return 'gold';if(a?.triage_status==='NEEDS_DEEP_REVIEW'||a?.triage_status==='INVALID_CLAIM')return 'deep';if(a?.triage_status)return 'triaged';return 'pending'}
+function save(){state.revision.reviewer=el('reviewer').value.trim();const a=annotation(currentClaim().claim_id);a.reviewed_by=state.revision.reviewer;a.updated_utc=new Date().toISOString();state.revision.draft_sets??={};state.revision.draft_sets[currentClaim().claim_id]=[...state.working];try{localStorage.setItem(KEY,JSON.stringify(state.revision));el('savedStatus').textContent='Salvo no navegador ✓'}catch(e){el('savedStatus').textContent='⚠ Sem armazenamento local: exporte JSON!'}window.auditDisk?.changed();updateWorkflow();renderClaimList();}
+function statusOf(c){const a=annotation(c.claim_id,false);if(a?.review_status==='FINALIZADO')return 'gold';if(a?.triage_status==='NEEDS_DEEP_REVIEW'||a?.triage_status==='INVALID_CLAIM')return 'deep';if(a?.triage_status)return 'triaged';if(a&&(a.claim_valid||a.factual_label||a.notes||a.full_document_checked||a.search_complete||a.gold_evidence_sets?.length||a.custom_sentence_ids?.length||Object.keys(a.candidate_annotations||{}).length)||(state.revision.draft_sets?.[c.claim_id]||[]).length)return 'deep';return 'pending'}
 function filtered(){const q=state.claimSearch.trim().toLowerCase();return DATA.claims.map((c,i)=>({c,i})).filter(({c})=>{const s=selectionOf(c);if(state.groupFilter==='selected'&&!s.selected)return false;if(state.groupFilter==='not_selected'&&s.selected)return false;if(state.groupFilter!=='selected'&&state.groupFilter!=='not_selected'&&state.groupFilter!=='all'&&s.selection_group!==state.groupFilter)return false;if(state.statusFilter!=='all'&&statusOf(c)!==state.statusFilter)return false;return !q||(searchable(c.claim_id+':claim',c.claim_text)+' '+c.doc_id+' '+c.claim_id).includes(q)})}
 function changeFilters(){state.listPage=0;const f=filtered();if(f.length&&!f.some(({i})=>i===state.current)){chooseIndex(f[0].i);return}render()}
 function chooseIndex(i){if(i<0||i>=DATA.claims.length)return;const pos=filtered().findIndex(x=>x.i===i);if(pos>=0)state.listPage=Math.floor(pos/70);state.current=i;state.quickCount=1;state.allPool=false;state.working=new Set(state.revision.draft_sets?.[currentClaim().claim_id]||[]);state.sourceSearch='';state.sourcePage=0;el('sourceSearch').value='';render();window.scrollTo({top:0,behavior:'smooth'})}
@@ -266,6 +268,35 @@ function renderSource(){
  el('sourcePrev').disabled=state.sourcePage<=0;el('sourceNext').disabled=start+80>=matched.length;
  el('sourceList').innerHTML=matched.slice(start,start+80).map(s=>{const selected=state.working.has(s.sentence_id);return `<div class="source-item ${selected?'selected':''}" id="source-${esc(s.sentence_id)}"><div class="source-id">${esc(shortId(s.sentence_id))}</div><div class="source-text">${bilingual(s.sentence_id,s.text)}<div class="row"><button class="btn ${selected?'green':'primary'}" aria-pressed="${selected}" data-set-toggle="${esc(s.sentence_id)}">${selected?'✓ Selecionada · remover':'Selecionar evidência'}</button><button class="btn" data-manual-add="${esc(s.sentence_id)}">Abrir na análise</button></div></div></div>`}).join('')||'<div class="empty-state">Nenhum trecho encontrado. Tente outra palavra ou limpe a busca para ler o documento completo.</div>';
 }
+let pendingPage=0;
+function pendingItems(){
+ const keys=['extraction','decision','evidence','source','search','draft'];
+ return DATA.claims.map((c,i)=>{
+  const a=annotation(c.claim_id,false)||{},working=new Set(state.revision.draft_sets?.[c.claim_id]||[]);
+  const checks=reviewChecks(c,a,working);
+  let reasons=a.claim_valid==='NAO'?[...(!a.notes?.trim()?[{key:'notes',text:'Justificar o problema da extração.'}]:[]),...(working.size?[{key:'draft',text:'Salvar ou limpar a seleção em montagem.'}]:[])]:checks.flatMap((x,j)=>x.ok?[]:[{key:keys[j],text:x.text}]);
+  if(a.review_status==='FINALIZADO'&&!reasons.length)return null;
+  if(!reasons.length)reasons=[{key:'finish',text:'Tudo preenchido: falta concluir a revisão.'}];
+  return {c,i,reasons,unstarted:statusOf(c)==='pending',finalized:a.review_status==='FINALIZADO'};
+ }).filter(x=>x&&selectionOf(x.c).selected);
+}
+function openPending(i){
+ state.groupFilter=hasSample?'selected':'all';state.statusFilter='all';state.claimSearch='';
+ el('groupFilter').value=state.groupFilter;el('statusFilter').value='all';el('claimSearch').value='';
+ state.mode='deep';chooseIndex(i);jumpTo('decisionSection');
+}
+function resumePending(){const rows=pendingItems(),next=rows.find(x=>x.i>state.current)||rows[0];if(next)openPending(next.i);else feedback('Não há pendências de preenchimento na amostra. Exporte a revisão para validar o gold.')}
+function renderOverview(){
+ const base=DATA.claims.filter(c=>selectionOf(c).selected),pending=pendingItems(),untouched=pending.filter(x=>x.unstarted).length,completed=base.length-pending.length;
+ el('overviewStats').innerHTML=[[base.length,'Na amostra'],[completed,'Concluídas sem pendência de preenchimento'],[pending.length-untouched,'Em andamento / conferir'],[untouched,'Não iniciadas']].map(([n,label])=>`<div class="overview-stat"><strong>${n}</strong><span>${label}</span></div>`).join('');
+ el('overviewSummary').textContent=`${base.length?Math.round(completed/base.length*100):0}% sem pendências de preenchimento. Contagem da amostra inteira, independente dos filtros da fila. A entrada no gold depende da validação da exportação.`;
+ el('resumePending').disabled=!pending.length;
+ const reason=el('pendingReason').value,rows=pending.filter(x=>reason==='all'||(reason==='unstarted'?x.unstarted:x.reasons.some(r=>r.key===reason))),pages=Math.ceil(rows.length/30);
+ pendingPage=Math.max(0,Math.min(pendingPage,pages-1));
+ el('pendingPage').textContent=`${rows.length} pendências · página ${pages?pendingPage+1:0}/${pages}`;
+ el('pendingPrev').disabled=pendingPage===0;el('pendingNext').disabled=pendingPage+1>=pages;
+ el('pendingList').innerHTML=rows.slice(pendingPage*30,(pendingPage+1)*30).map(x=>`<button class="pending-entry" data-pending-index="${x.i}"><strong>${esc(x.c.claim_id)}</strong> · ${x.unstarted?'Não iniciada':x.finalized?'Revisada com pendência':'Em andamento'}<small>${x.reasons.map(r=>esc(r.text)).join(' · ')}</small></button>`).join('')||'<p class="muted">Nenhuma pendência neste filtro.</p>';
+}
 function renderClaimList(){
  const f=filtered(),size=70,pg=Math.max(0,Math.min(state.listPage,Math.ceil(f.length/size)-1));state.listPage=pg;
  el('selectedCount').textContent=hasSample?`${DATA.selection.filter(x=>x.selected).length} / ${DATA.claims.length}`:`${DATA.claims.length}`;
@@ -274,7 +305,7 @@ function renderClaimList(){
  el('claimList').innerHTML=f.slice(pg*size,(pg+1)*size).map(({c,i})=>{const status=statusOf(c),sm=selectionOf(c),label=status==='gold'?'Revisada':status==='triaged'?'Triada':status==='deep'?'Conferir':'Pendente';return `<button class="claim-item ${i===state.current?'active':''}" data-claim-index="${i}" aria-current="${i===state.current?'true':'false'}"><div class="headparts"><strong class="tiny">${esc(c.doc_id.slice(0,19))}</strong><span class="pill ${status==='gold'?'green':status==='deep'?'orange':''}">${label}</span></div><div class="excerpt">${bilingual(c.claim_id+':claim',c.claim_text,true)}</div><span class="claim-id">${esc(c.claim_id)}</span><div class="minitags"><span class="pill" title="${esc(groupName(sm.selection_group))}">${esc(sm.selection_group==='SEM_PLANO'?'Todas':sm.selection_group.split('_')[0])}</span>${sm.priority_score!=null?`<span class="pill" title="Prioridade para revisão, não confiança factual">Prioridade ${formatScore(sm.priority_score,0)}</span>`:''}</div></button>`}).join('')||'<div class="empty-state">Nenhuma afirmação neste filtro. Altere a situação ou limpe a busca para continuar.</div>';
  const base=DATA.claims.filter(c=>selectionOf(c).selected),done=base.filter(c=>statusOf(c)==='gold').length;
  el('progress').innerHTML=`<strong>${done} de ${base.length} revisadas</strong><br>${Math.max(0,base.length-done)} ainda não concluídas`;
- el('queueProgress').max=base.length||1;el('queueProgress').value=done;
+ el('queueProgress').max=base.length||1;el('queueProgress').value=done;renderOverview();
 }
 function render(){if(!DATA.claims.length)return;const c=currentClaim(),s=selectionOf(c);el('claimInfo').innerHTML=`<div class="caps">${esc(c.doc_id)} · ${esc(c.claim_id)} · ${state.current+1}/${DATA.claims.length}</div><strong class="caps">Afirmação / Claim</strong><div class="claim-box">${bilingual(c.claim_id+':claim',c.claim_text)}</div>${c.claim_original!==c.claim_resolved?`<div class="small muted"><strong>Claim original:</strong> ${bilingual(c.claim_id+':original',c.claim_original)}<strong>Expansão automática:</strong> ${bilingual(c.claim_id+':resolved',c.claim_resolved)} <span class="pill orange">Não verificada</span></div>`:''}<div class="origin">${c.origin_sentence===c.claim_text?'<strong>Sentença do resumo:</strong> mesmo texto da afirmação acima.':`<strong class="caps">Sentença do resumo</strong>${bilingual(c.claim_id+':origin',c.origin_sentence||'Não disponível')}`}</div>`;el('claimGroup').textContent=hasSample?groupName(s.selection_group):'Todas as afirmações';el('priorityText').textContent=s.priority_score!=null?`Prioridade de revisão ${s.priority_score}/100`:'';el('quickSection').classList.toggle('visible',state.mode==='quick');el('deepSection').classList.toggle('visible',state.mode==='deep');el('quickModeBtn').classList.toggle('active',state.mode==='quick');el('deepModeBtn').classList.toggle('active',state.mode==='deep');renderClaimList();renderQuick();renderDeep();renderSource();updateWorkflow()}
 function gotoSource(sid){state.sourceSearch=sid;state.sourcePage=0;el('sourceSearch').value=sid;renderSource();el('sourceSearch').scrollIntoView({behavior:'smooth',block:'center'});const t=el('source-'+sid);if(t)t.classList.add('located')}
@@ -286,6 +317,7 @@ function reviewPayload(){return {...state.revision,selection_id:meta?.selection_
 function exportReview(){save();const payload={...reviewPayload(),exported_utc:new Date().toISOString()};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`revisao_${manifest.dataset_id.slice(0,9)}_${new Date().toISOString().slice(0,10)}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
 function getSid(sid){return docOf(currentClaim()).sentences.some(s=>s.sentence_id===sid)}
 document.body.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const c=currentClaim(),a=annotation(c.claim_id);
+ if(b.dataset.pendingIndex!==undefined){openPending(Number(b.dataset.pendingIndex));return}
  if(b.dataset.jump){jumpTo(b.dataset.jump);return}
  if(b.dataset.claimIndex!==undefined){chooseIndex(Number(b.dataset.claimIndex));return}
  if(b.dataset.triage){triage(b.dataset.triage);return}
@@ -308,7 +340,7 @@ el('themeToggle').onclick=()=>setTheme(document.documentElement.dataset.theme===
 setTheme(document.documentElement.dataset.theme||'light',false);
 el('languageView').value=state.language;
 el('languageView').onchange=e=>{state.language=e.target.value;try{sessionStorage.setItem('audit-language',state.language)}catch(_){}render()};
-el('quickModeBtn').onclick=()=>{state.mode='quick';render()};el('deepModeBtn').onclick=()=>{state.mode='deep';render()};el('nextBtn').onclick=()=>moveFiltered(1);el('prevBtn').onclick=()=>moveFiltered(-1);el('nextPending').onclick=nextIncomplete;
+el('quickModeBtn').onclick=()=>{state.mode='quick';render()};el('deepModeBtn').onclick=()=>{state.mode='deep';render()};el('nextBtn').onclick=()=>moveFiltered(1);el('prevBtn').onclick=()=>moveFiltered(-1);el('nextPending').onclick=resumePending;
 el('claimSearch').oninput=e=>{state.claimSearch=e.target.value;changeFilters()};el('groupFilter').onchange=e=>{state.groupFilter=e.target.value;changeFilters()};el('statusFilter').onchange=e=>{state.statusFilter=e.target.value;changeFilters()};
 el('listPrev').onclick=()=>{state.listPage=Math.max(0,state.listPage-1);renderClaimList()};el('listNext').onclick=()=>{state.listPage++;renderClaimList()};
 el('showThree').onclick=()=>{state.quickCount=3;renderQuick()};el('showFive').onclick=()=>{state.quickCount=5;renderQuick()};el('showAllQuick').onclick=()=>{state.quickCount='all';renderQuick()};
@@ -319,7 +351,16 @@ el('sourceSearch').oninput=e=>{state.sourceSearch=e.target.value;state.sourcePag
 el('saveSet').onclick=()=>{if(!state.working.size)return alert('Selecione ao menos uma sentença.');const a=annotation(currentClaim().claim_id),arr=[...state.working].sort();if((a.gold_evidence_sets||[]).some(old=>JSON.stringify([...old].sort())===JSON.stringify(arr)))return alert('Conjunto já salvo.');a.gold_evidence_sets??=[];a.gold_evidence_sets.push(arr);state.working.clear();save();renderDeep();renderSource();feedback('Conjunto de evidências salvo. Continue em Registrar a decisão.')};el('clearSet').onclick=()=>{state.working.clear();save();renderDeep();renderSource()};
 el('reviewer').addEventListener('input',save);el('exportBtn').onclick=exportReview;el('importBtn').onclick=()=>el('importFile').click();
 el('importFile').onchange=async e=>{const file=e.target.files?.[0];if(!file)return;try{const payload=JSON.parse(await file.text());if(payload.dataset_id!==manifest.dataset_id||payload.schema_version!==1||typeof payload.claims!=='object'||!payload.claims)throw Error('Dataset ou estrutura inválida.');if(payload.selection_id&&meta&&payload.selection_id!==meta.selection_id)throw Error('Arquivo de revisão corresponde a outro plano de amostragem.');if(!confirm('Importar e substituir as anotações locais?'))return;state.revision={schema_version:1,dataset_id:manifest.dataset_id,claims:payload.claims,reviewer:payload.reviewer||'',draft_sets:payload.draft_sets||{}};state.working=new Set(state.revision.draft_sets[currentClaim().claim_id]||[]);el('reviewer').value=state.revision.reviewer;save();render();alert('Anotações restauradas.')}catch(err){alert('Erro de importação: '+err.message)}finally{e.target.value=''}};
-document.addEventListener('keydown',e=>{const active=document.activeElement;if(e.ctrlKey||e.altKey||e.metaKey||active?.matches('input,textarea,select,[contenteditable]'))return;if(state.mode==='quick'&&['1','2','3','4'].includes(e.key)){const map={'1':'SUPPORT_CANDIDATE','2':'CONTRADICTION_CANDIDATE','3':'NEEDS_DEEP_REVIEW','4':'INVALID_CLAIM'};triage(map[e.key]);e.preventDefault()}});
+el('resumePending').onclick=resumePending;
+el('pendingReason').onchange=()=>{pendingPage=0;renderOverview()};
+el('pendingPrev').onclick=()=>{pendingPage--;renderOverview()};el('pendingNext').onclick=()=>{pendingPage++;renderOverview()};
+document.addEventListener('keydown',e=>{
+ const active=document.activeElement;
+ if(e.defaultPrevented||e.repeat||e.isComposing||e.ctrlKey||e.altKey||e.metaKey||active?.matches('input,textarea,select')||active?.isContentEditable)return;
+ const actions={j:()=>moveFiltered(1),k:()=>moveFiltered(-1),n:resumePending,'/':()=>{el('claimSearch').focus();el('claimSearch').scrollIntoView({block:'center'})},f:()=>{el('sourceSearch').focus();el('sourceSearch').scrollIntoView({block:'center'})},'?':()=>{el('shortcutsHelp').open=!el('shortcutsHelp').open;el('shortcutsHelp').scrollIntoView({block:'center'})}};
+ const action=actions[e.key.toLowerCase()];if(action){e.preventDefault();action();return}
+ if(state.mode==='quick'&&['1','2','3','4'].includes(e.key)){const map={'1':'SUPPORT_CANDIDATE','2':'CONTRADICTION_CANDIDATE','3':'NEEDS_DEEP_REVIEW','4':'INVALID_CLAIM'};triage(map[e.key]);e.preventDefault()}
+});
 function measureHeader(){document.documentElement.style.setProperty('--header-height',document.querySelector('header').offsetHeight+'px')}
 window.addEventListener('resize',measureHeader);
 if(window.ResizeObserver)new ResizeObserver(measureHeader).observe(document.querySelector('header'));

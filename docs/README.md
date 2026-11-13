@@ -1,6 +1,11 @@
 # Documentação
 
+A arquitetura principal agora está dividida em [Fase 1](../fase1_referencia/README.md), [Fase 2](../fase2_injecao/README.md), [Fase 3](../fase3_pipeline/README.md) e [avaliação automática](../avaliacao_automatica/README.md). Os comandos históricos abaixo permanecem por compatibilidade.
+
+
 ## Usar o projeto
+
+Para o novo fluxo de anotação e pré-aprovação em uma sessão, veja [Validação integrada e automação experimental](integrated-validation.md).
 
 | Guia | Conteúdo |
 |---|---|

@@ -86,10 +86,10 @@ def counts(path):
 
 def execute_stage(stage, input_path, folder, config, start=0, num_docs=None, all_docs=False):
     if stage=='generate':
-        from .data.injection import run
+        from .fase2_injecao.injection import run
         return run(folder,config,start,num_docs,input_path,all_docs=all_docs)
     if stage=='audit':
-        from .data.validation import audit_dataframe
+        from .fase2_injecao.validation import audit_dataframe
         from .schemas import read_injected_csv
         frame=read_injected_csv(input_path).iloc[start:None if num_docs is None else start+num_docs]
         if frame.empty:
@@ -100,9 +100,9 @@ def execute_stage(stage, input_path, folder, config, start=0, num_docs=None, all
     output=folder/f'{stage}.parquet'
     if stage=='claims':
         if config['claims']['variant']=='enriched':
-            from .claims.enriched import run
+            from .fase3_pipeline.claims.enriched import run
         else:
-            from .claims.extraction import run
+            from .fase3_pipeline.claims.extraction import run
         run(input_path,output,config,start,num_docs)
         from .schemas import extraction_claims,write_jsonl
         labels=[{k:r[k] for k in ('claim_id','doc_id','generator_label','is_gold')} for r in extraction_claims(output)]
@@ -110,11 +110,11 @@ def execute_stage(stage, input_path, folder, config, start=0, num_docs=None, all
     else:
         input_path=selected_parquet(input_path,folder,start,num_docs)
         if stage=='retrieval':
-            from .retrieval.pipeline import run
+            from .fase3_pipeline.retrieval.pipeline import run
         elif stage=='nli':
-            from .nli.evaluation import run
+            from .fase3_pipeline.nli.evaluation import run
         elif stage=='taxonomy':
-            from .taxonomy.classification import run
+            from .avaliacao_automatica.taxonomy.classification import run
         else:
             raise ValueError(f'Unknown stage: {stage}')
         run(input_path,output,config)
@@ -127,14 +127,14 @@ def execute_stage(stage, input_path, folder, config, start=0, num_docs=None, all
 def reference_stage(command, input_path, folder, config, args):
     if command=='prepare-reference':
         from argparse import Namespace
-        from .reference.preparation import run
+        from .fase1_referencia.preparation import run
         opts=dict(config['preparation'])
         # Revisions are supported by the migrated implementation and pinned in config.
         opts.update(entrada=str(input_path),saida=str(folder))
         run(Namespace(**opts))
         return folder/'manifest.json'
     if command=='sample-reference':
-        from .reference.sampling import select
+        from .fase1_referencia.sampling import select
         # Preserve raw IDs and original payloads; sampling lives with its exact frame.
         for p in Path(input_path).iterdir():
             if p.is_file() and p.name in ('manifest.json','documentos.jsonl','sentencas.jsonl','claims.jsonl','candidatos.jsonl'):
@@ -143,27 +143,27 @@ def reference_stage(command, input_path, folder, config, args):
         select(folder,s['sample_size'],(s['fraction_a'],s['fraction_b'],s['fraction_c']),s['seed'])
         return folder/'plano_amostragem.json'
     if command=='review-html':
-        from .reference.html import run
+        from .fase1_referencia.html import run
         return run(input_path,folder/'avaliacao.html',project_path(args.translations) if args.translations else None)
     if command=='translate-reference':
-        from .reference.translation import OllamaTranslator, translate_reference
+        from .fase1_referencia.translation import OllamaTranslator, translate_reference
         translator=OllamaTranslator(args.model,args.ollama_host,args.timeout)
         glossary=json.loads(project_path(args.glossary).read_text(encoding='utf-8')) if args.glossary else None
         return translate_reference(input_path,folder,project_path(args.cache),translator,
                                    scope=args.scope,max_calls=args.max_calls,batch_size=args.batch_size,glossary=glossary)
     if command=='export-reference':
-        from .reference.export import validate
+        from .fase1_referencia.export import validate
         validate(input_path,project_path(args.annotations),folder,args.include_outside_sample)
         return folder/'resumo_validacao.json'
     if command=='suggest-reference':
-        from .reference.model_suggestions import run
+        from .fase1_referencia.model_suggestions import run
         output=folder/'predictions.jsonl'
         run(input_path,output,args.model or 'MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli',
             rank=args.rank,max_claims=args.max_claims,device=args.device or 'auto')
         return output
     if command=='audit-qwen':
         import pandas as pd
-        from .reference.qwen import auditar_dataframe,MODEL
+        from .fase1_referencia.qwen import auditar_dataframe,MODEL
         frame=pd.read_parquet(input_path)
         if args.max_claims:
             frame=frame.iloc[:args.max_claims]
